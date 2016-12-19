@@ -1,0 +1,200 @@
+/******************************************
+ * Basic Styles
+ ******************************************/
+
+#dsidx-listings {
+	.dsidx-listing {
+		.dsidx-media {
+			margin: 30px;
+		}
+		.dsidx-data {
+			margin: 20px 30px 20px 320px;
+		}
+		.dsidx-primary-data {
+			padding-bottom: 20px;
+		}
+		.dsidx-secondary-data {
+			padding-top: 20px;
+		}
+	}
+}
+#dsidx select, #dsidx-search-form select,
+#dsidx input,
+#dsidx textarea {
+	border: 1px solid $border-color;
+}
+ol#dsidx-listings {
+	padding: 30px 0;
+}
+
+#dsidx {
+	h3 {
+		margin-bottom: 20px;
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	table {
+		label {
+			margin-bottom: 0;
+			line-height: 27px;
+		}
+	}
+	.dsidx-contact-form-submit {
+		background-color: $theme-color;
+		color: $white;
+		font-size: 12px;
+		font-weight: 900;
+		text-transform: uppercase;
+		border-radius: 3px;
+		padding: 6px 30px 10px;
+		@include button-3d(empty, -2px, darken($brand-primary,15%));
+	}
+}
+body.dsidx {
+	input,select, textarea {
+		border: 1px solid $border-color;
+		padding: 2px;
+		line-height: 21px;
+	}
+}
+.dsidx-resp-area input[type="text"], 
+.dsidx-resp-area select {
+	border: 1px solid $border-color;
+	padding: 2px;
+	height: 40px;
+}
+.dsidx-resp-area textarea {
+	border: 1px solid $border-color;
+	padding: 2px;
+}
+.dsidx-resp-area input[type="submit"] {
+	background-color: $theme-color;
+	color: $white;
+	font-size: 12px;
+	font-weight: 900;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 6px 30px 10px;
+	@include button-3d(empty, -2px, darken($brand-primary,15%));
+}
+
+.dsidx-results .dsidx-paging-control {
+    background: #e5ebee none repeat scroll 0 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    box-sizing: border-box;
+    color: #96a8b6;
+    float: left;
+    font-family: "Arial",sans-serif;
+    font-size: 11px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    text-align: left;
+    width: 65%;
+}
+.dsidx-results .dsidx-paging-control a {
+    color: #96a8b6;
+    text-decoration: underline;
+    transition: all 300ms ease-in-out 0s;
+}
+.dsidx-results .dsidx-paging-control a:hover {
+    color: #425b6e;
+    transition: all 300ms ease-in-out 0s;
+}
+.dsidx-results .dsidx-sorting-control {
+    background: #e5ebee none repeat scroll 0 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #96a8b6;
+    float: right;
+    font-family: "Arial",sans-serif;
+    font-size: 11px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    width: 35%;
+}
+.dsidx-results .dsidx-sorting-control form {
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#dsidx-disclaimer {
+	clear: left;
+}
+
+
+/******************************************
+ * Single IDX
+ ******************************************/
+.dsidx-details {
+	background-color: $white;
+	padding: 20px 30px 10px;
+	#dsidx-description {
+		padding-left: 30px;
+		font-style: italic;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	hr {
+		display: none;
+	}
+}
+.dsidx-details #dsidx-actions {
+    background: #e5ebee none repeat scroll 0 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #96a8b6;
+    font-family: "Arial",sans-serif;
+    font-size: 11px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    text-align: left;
+    width: 100%;
+}
+#dsidx-primary-data,
+#dsidx-secondary-data,
+.dsidx-supplemental-data,
+#dsidx-contact-form table {
+	border: 1px solid $border-color;
+}
+
+/******************************************
+ * IDX widget
+ ******************************************/
+div.dsidx-results-widget .dsidx-slideshow, 
+div.dsidx-results-widget .dsidx-slideshow ul, 
+div.dsidx-results-widget .dsidx-slideshow li {
+	height: 250px;
+}
+.dsidx-widget-single-listing {
+	width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	.dsidx-results .dsidx-paging-control {
+		width: 55%;
+	}
+	.dsidx-results .dsidx-sorting-control {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 639px) {
+	.dsidx-results .dsidx-paging-control {
+		width: 100%;
+	}
+	.dsidx-results .dsidx-sorting-control {
+		width: 100%;
+		text-align: left;
+	}
+	#dsidx-listings .dsidx-listing .dsidx-data {
+		margin: 0 30px 25px 30px;
+	}
+	#dsidx-listings .dsidx-listing .dsidx-media {
+		margin-bottom: 20px;
+	}
+}

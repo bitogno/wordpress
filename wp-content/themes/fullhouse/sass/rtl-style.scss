@@ -1,0 +1,113 @@
+/*
+Theme Name: fullhouse
+Theme URI: https://wpopal.org/themes/fullhouse/
+Author: WPOPAL Team
+Author URI: https://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: fullhouse
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "rtl/rtl";                      // RTL
+
+
+@import "bootstrap-rtl";
+@import "rtl/bootstrap/mixins";
+@import "components/variables";
+@import "components/mixins";
+
+@import "components/base";
+@import "components/template-layout";
+
+@import "components/widget-layout";
+@import "components/widgets";
+
+@import "components/nav";
+@import "components/page";
+
+
+@import "components/post-formats";
+@import "components/post-single";
+@import "components/custom-posttype";
+
+@import "components/elements";
+@import "components/vc";
+@import "components/responsive";
+@import "rtl/bootstrap/utilities";
+@import "rtl/bootstrap/input-groups";
+@import "rtl/bootstrap/navbar";
+
+.entry-content-page .slider-property-featured-wrapper .opalestate-rows article header .property-status {
+	left: auto;
+	right: 60px;
+}
+.entry-content-page .slider-property-featured-wrapper .slider-property-featured .widget-estate-property .opalestate-rows article .property-meta .property-meta-list li {
+	float: right;
+	padding-right: 0;
+	padding-left: 20px;
+	text-align: right;
+}
+.rtl .search-properies-form ul.list-property-status li {
+	float: right;
+}
+.input-group .form-control:last-child, 
+.input-group-addon:last-child, 
+.input-group-btn:last-child > .btn, 
+.input-group-btn:last-child > .btn-group > .btn, 
+.input-group-btn:last-child > .dropdown-toggle, 
+.input-group-btn:first-child > .btn:not(:first-child), 
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+	margin-left: 0;
+	margin-right: -1px;
+}
+.widget_mc4wp_form_widget .mc4wp-form .input-group .form-control {
+	border-radius: 0 5px 5px 0;
+}
+.rtl .opalestate-rows article .label-featured {
+	right: auto;
+	left: 20px;
+}
+.rtl .opalestate-rows article .author-link .avatar {
+	margin-right: 0;
+	margin-left: 10px;
+}
+.rtl .single-opalestate-container > article header .col-lg-3 {
+	text-align: left;
+}
+.single-opalestate-container > article .property-meta .property-address {
+	overflow: hidden;
+	.property-locations {
+		float: left;
+		margin-right: 5px;
+	}
+}
+.single-opalestate-container > article .property-meta .property-meta-list > li {
+	overflow: hidden;
+	i {
+		float: right;
+		margin-right: 0;
+		margin-left: 10px;
+	}
+}
+.rtl .cmb2-wrap input[type="checkbox"], .rtl .cmb2-wrap input[type="radio"] {
+	margin: 0 0 0 5px;
+}
+.rtl .cmb-repeat-group-wrap .cmb-th, .rtl .postbox-container .cmb-th {
+	padding: 0 0 0 2%;
+}
+.rtl .property-list .abs-col-item::after {
+	right: auto;
+	left: 0;
+}

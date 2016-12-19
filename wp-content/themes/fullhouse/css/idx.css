@@ -1,0 +1,321 @@
+/*
+Theme Name: FullHouse
+Theme URI: http://demovenustheme.com/wordpress/fullhouse/
+Author: Opal Team
+Author URI: https://wordpress.org/
+Description: In 2016, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: fullhouse
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*
+ * Global variables
+ */
+/* main color which will be used for all main block styles... */
+/**
+ * Import component variables
+ */
+/**
+ *
+ */
+/* --- SCSS For Accordion --- */
+/* --- SCSS For Breadcrumb --- */
+/* --- SCSS For Buttons --- */
+/* --- SCSS For Call-to-action --- */
+/* --- SCSS For Content-slider --- */
+/*  */
+/* carousel-controls-v1 */
+/* carousel-controls-v2 */
+/* carousel-controls-v3 */
+/* Navigation Styles */
+/* carousel-indicators-v1 */
+/* carousel-indicators-v2 */
+/* carousel-indicators-v3 */
+/* carousel-indicators-v4 */
+/* carousel-indicators-v5 */
+/* carousel-indicators-v6 */
+/* --- SCSS For Counters --- */
+/* --- SCSS For Heading --- */
+/* --- SCSS For Icon-box --- */
+/* --- SCSS For Interactive-banner --- */
+/* --- SCSS For Latest-posts --- */
+/* latest posts */
+/* --- SCSS For List --- */
+/* variables for list */
+/* variables for list light */
+/* --- SCSS For Message --- */
+/* --- SCSS For Newsletter --- */
+/* --- SCSS For Piechart --- */
+/* --- SCSS For Pricing --- */
+/* --- SCSS For Process-steps --- */
+/* process-steps */
+/* --- SCSS For Service --- */
+/* variables for tab style1 using as base of tab */
+/* --- SCSS For Style-icon --- */
+/* Variables icons default */
+/* Variables icons bodered */
+/* Variables icons darker */
+/* Variables icons light */
+/* Variables icons plain */
+/* Variables icons for light style */
+/* Variables icons outline */
+/* Variables icons inverse */
+/* --- SCSS For Table --- */
+/* --- SCSS For Tabs --- */
+/* variables for tab style1 using as base of tab */
+/* tab style version 5 */
+/* tab style version 6 */
+/* --- SCSS For Testimonials --- */
+/* testimonials default */
+/* testimonials-v1 */
+/* testimonials light */
+/* --- SCSS For Typography --- */
+/**
+ *   Blocks Layout Selectors
+ */
+/********* LAYOUT **************/
+/**
+ * Import component variables
+ */
+/** elements mixins **/
+/**
+* Transition-timing-function property@mixin 
+*/
+/*background RGBA
+============================================*/
+/*inline-block
+============================================*/
+/****/
+/****/
+/****/
+/** elements mixins **/
+/**
+* Transition-timing-function property@mixin 
+*/
+/*background RGBA
+============================================*/
+/*inline-block
+============================================*/
+/****/
+/****/
+/******************************************
+ * Basic Styles
+ ******************************************/
+#dsidx-listings .dsidx-listing .dsidx-media {
+  margin: 30px;
+}
+#dsidx-listings .dsidx-listing .dsidx-data {
+  margin: 20px 30px 20px 320px;
+}
+#dsidx-listings .dsidx-listing .dsidx-primary-data {
+  padding-bottom: 20px;
+}
+#dsidx-listings .dsidx-listing .dsidx-secondary-data {
+  padding-top: 20px;
+}
+
+#dsidx select, #dsidx-search-form select,
+#dsidx input,
+#dsidx textarea {
+  border: 1px solid #ebebeb;
+}
+
+ol#dsidx-listings {
+  padding: 30px 0;
+}
+
+#dsidx h3 {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#dsidx table label {
+  margin-bottom: 0;
+  line-height: 27px;
+}
+#dsidx .dsidx-contact-form-submit {
+  background-color: #ef114c;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 6px 30px 10px;
+  border: 0;
+  box-shadow: 0 -2px #a80b35 inset;
+  -o-box-shadow: 0 -2px #a80b35 inset;
+  -moz-box-shadow: 0 -2px #a80b35 inset;
+  -webkit-box-shadow: 0 -2px #a80b35 inset;
+  -ms-box-shadow: 0 -2px #a80b35 inset;
+}
+
+body.dsidx input, body.dsidx select, body.dsidx textarea {
+  border: 1px solid #ebebeb;
+  padding: 2px;
+  line-height: 21px;
+}
+
+.dsidx-resp-area input[type="text"],
+.dsidx-resp-area select {
+  border: 1px solid #ebebeb;
+  padding: 2px;
+  height: 40px;
+}
+
+.dsidx-resp-area textarea {
+  border: 1px solid #ebebeb;
+  padding: 2px;
+}
+
+.dsidx-resp-area input[type="submit"] {
+  background-color: #ef114c;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 6px 30px 10px;
+  border: 0;
+  box-shadow: 0 -2px #a80b35 inset;
+  -o-box-shadow: 0 -2px #a80b35 inset;
+  -moz-box-shadow: 0 -2px #a80b35 inset;
+  -webkit-box-shadow: 0 -2px #a80b35 inset;
+  -ms-box-shadow: 0 -2px #a80b35 inset;
+}
+
+.dsidx-results .dsidx-paging-control {
+  background: #e5ebee none repeat scroll 0 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  box-sizing: border-box;
+  color: #96a8b6;
+  float: left;
+  font-family: "Arial",sans-serif;
+  font-size: 11px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  text-align: left;
+  width: 65%;
+}
+
+.dsidx-results .dsidx-paging-control a {
+  color: #96a8b6;
+  text-decoration: underline;
+  transition: all 300ms ease-in-out 0s;
+}
+
+.dsidx-results .dsidx-paging-control a:hover {
+  color: #425b6e;
+  transition: all 300ms ease-in-out 0s;
+}
+
+.dsidx-results .dsidx-sorting-control {
+  background: #e5ebee none repeat scroll 0 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #96a8b6;
+  float: right;
+  font-family: "Arial",sans-serif;
+  font-size: 11px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  width: 35%;
+}
+
+.dsidx-results .dsidx-sorting-control form {
+  display: inline-block;
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#dsidx-disclaimer {
+  clear: left;
+}
+
+/******************************************
+ * Single IDX
+ ******************************************/
+.dsidx-details {
+  background-color: #FFF;
+  padding: 20px 30px 10px;
+}
+.dsidx-details #dsidx-description {
+  padding-left: 30px;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 30px;
+}
+.dsidx-details hr {
+  display: none;
+}
+
+.dsidx-details #dsidx-actions {
+  background: #e5ebee none repeat scroll 0 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #96a8b6;
+  font-family: "Arial",sans-serif;
+  font-size: 11px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+#dsidx-primary-data,
+#dsidx-secondary-data,
+.dsidx-supplemental-data,
+#dsidx-contact-form table {
+  border: 1px solid #ebebeb;
+}
+
+/******************************************
+ * IDX widget
+ ******************************************/
+div.dsidx-results-widget .dsidx-slideshow,
+div.dsidx-results-widget .dsidx-slideshow ul,
+div.dsidx-results-widget .dsidx-slideshow li {
+  height: 250px;
+}
+
+.dsidx-widget-single-listing {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .dsidx-results .dsidx-paging-control {
+    width: 55%;
+  }
+
+  .dsidx-results .dsidx-sorting-control {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .dsidx-results .dsidx-paging-control {
+    width: 100%;
+  }
+
+  .dsidx-results .dsidx-sorting-control {
+    width: 100%;
+    text-align: left;
+  }
+
+  #dsidx-listings .dsidx-listing .dsidx-data {
+    margin: 0 30px 25px 30px;
+  }
+
+  #dsidx-listings .dsidx-listing .dsidx-media {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,17 @@
+/*Theme Name: ThemeDomoum
+Theme URI: http: //example.com/
+Description: Le thème du site Domoum
+Author: Alexandre RABASSE
+Author URI: http: //example.com/about/
+Template: fullhouse
+Version: 0.1.0
+*/
+
+*{
+  color: red;
+}
+
+img{
+  max-width : 20%;
+  height : auto;
+}
