@@ -44,6 +44,12 @@ $meta   = $property->get_meta_shortinfo();
 						<div class="pull-right">
 							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
 						</div>
+						<div class="pull-right">
+							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+						</div>
+						<div class="pull-right">
+							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+						</div>
 						
 					</div>
 				</div>	
