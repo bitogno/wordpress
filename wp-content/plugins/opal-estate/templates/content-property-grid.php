@@ -15,8 +15,19 @@ $property = opalesetate_property( get_the_ID() );
 	 	<?php opalestate_get_loop_thumbnail( opalestate_get_option('loop_image_size','large') ); ?>
 		<?php echo $property->render_statuses(); ?>
 	</header>
-     
 	<?php opalestate_get_loop_short_meta(); ?>
+	</br>
+	<div class="row">
+		<div class="col-lg-2 col-lg-offset-1">
+			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+		</div>
+		<div class="col-lg-2 col-lg-offset-2">
+			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+		</div>
+		<div class="col-lg-2 col-lg-offset-2">
+			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+		</div>
+	</div>
     	
 	<div class="entry-content">
 		
@@ -25,6 +36,7 @@ $property = opalesetate_property( get_the_ID() );
 	  	<div class="entry-summary">
 			<?php echo $property->get_address(); ?>
 		</div>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
  	<div class="property-meta-bottom">	
@@ -33,7 +45,7 @@ $property = opalesetate_property( get_the_ID() );
 
 	<div class="entry-content-bottom clearfix">
 		<?php echo $property->render_author_link(); ?>
-		<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+		
 	</div>
 
 	<?php  do_action( 'opalestate_after_property_loop_item' ); ?>

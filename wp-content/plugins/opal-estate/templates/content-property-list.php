@@ -11,9 +11,10 @@ $meta   = $property->get_meta_shortinfo();
  
 ?>
 <article itemscope itemtype="http://schema.org/Property" <?php post_class(); ?>><div class="property-list-style-v2">
-	
+	</br>
 	<div class="property-list container-cols-3">
 		<header>
+			<div class="col-lg-11">
 			<div class="property-group-label">
 				<?php do_action( 'opalestate_before_property_loop_item' ); ?>
 			</div>
@@ -22,38 +23,34 @@ $meta   = $property->get_meta_shortinfo();
 			<?php echo $property->render_statuses(); ?>
 
 			<?php opalestate_get_loop_short_meta(); ?>
-
+			</div>
+			<div class="col-lg-1" style="height:100%;">
+				<div class="row" style="height:30%;">
+					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+				</div>
+				<div class="row">
+					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+				</div>
+				<div class="row">
+					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+				</div>
+			</div>
 		</header>
-
 		<div class="abs-col-item">
 			<div class="entry-content">
-			
-				<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-					
-			  	<div class="property-address">
-					<?php echo $property->get_address(); ?>
-				</div>
-
-				 
-                <?php opalestate_property_loop_price(); ?>
-
-				<div class="property-abs-bottom">
-				 	<div class="property-meta-bottom clearfix">
+				<div class="col-lg-9">
+					<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 						
-				 	<div class="pull-left"><?php echo $property->render_author_link(); ?></div>
-						<div class="pull-right">
-							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-						</div>
-						<div class="pull-right">
-							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-						</div>
-						<div class="pull-right">
-							<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-						</div>
-						
+				  	<div class="property-address">
+						<?php echo $property->get_address(); ?>
 					</div>
-				</div>	
 
+					 
+	                <?php opalestate_property_loop_price(); ?>
+				</div>
+                <div class="col-lg-3">
+                	<div class="pull-left"><?php echo $property->render_author_link(); ?></div>
+				</div>
 			</div><!-- .entry-content -->
 		</div> 
 		
