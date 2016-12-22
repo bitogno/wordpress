@@ -3,9 +3,9 @@
 	require_once("../../wp-load.php");
 	require_once 'functions.php';
 
-	// $response = file_get_contents('https://fr-fr.roomlala.com/prod/file/welchome/ads_fr.xml');
-	// $response = new SimpleXMLElement($response);
 
+	$response = file_get_contents('https://fr-fr.roomlala.com/prod/file/welchome/ads_fr.xml');
+	$response = new SimpleXMLElement($response);
 	// echo $response;
 
 	// $success = file_get_contents_chunked("https://fr-fr.roomlala.com/prod/file/welchome/ads_fr.xml",4096,function($chunk,&$handle,$iteration){

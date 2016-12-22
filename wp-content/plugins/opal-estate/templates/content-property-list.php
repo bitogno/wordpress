@@ -38,26 +38,23 @@ $meta   = $property->get_meta_shortinfo();
 		</header>
 		<div class="abs-col-item">
 			<div class="entry-content">
-				<div class="col-lg-9">
-					<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-						
-				  	<div class="property-address">
-						<?php echo $property->get_address(); ?>
-					</div>
+				<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+					
+			  	<div class="property-address">
+					<?php echo $property->get_address(); ?>
+				</div>
 
-					 
-	                <?php opalestate_property_loop_price(); ?>
-				</div>
-                <div class="col-lg-3">
-                	<div class="pull-left"><?php echo $property->render_author_link(); ?></div>
-				</div>
+				 
+                <?php opalestate_property_loop_price(); ?>
 			</div><!-- .entry-content -->
 		</div> 
 		
-		<div class="entry-summary">
+		<div class="entry-summary"> 
 			<h5><?php echo __( 'Description', 'opalestate' ); ?></h5>
 			<?php the_excerpt(); ?>
+			<div class="pull-left"><?php echo $property->render_author_link(); ?></div>
 		</div><!-- .entry-summary -->
+		
 	</div>	
 	
 	<?php do_action( 'opalestate_after_property_loop_item' ); ?>

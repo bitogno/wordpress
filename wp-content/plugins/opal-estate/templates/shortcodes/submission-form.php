@@ -14,7 +14,7 @@
 						</div>
 
 					<?php endforeach; unset( $_SESSION['messages'] ); ?>
-				</div>
+				</div>		
 
 			<?php endif; ?>
 
