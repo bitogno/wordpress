@@ -7,11 +7,12 @@ Template: fullhouse
 Version: 0.1.0
 */
 
-*{
+/* Commenté car probablement non voulu */
+/**{
   color: red;
-}
+}*/
 
-img{
+/*img{
   max-width : 20%;
   height : auto;
-}
+}*/
