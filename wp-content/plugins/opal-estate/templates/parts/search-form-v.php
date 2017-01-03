@@ -79,6 +79,11 @@
 									'decimals' => opalestate_get_price_decimals(),
 									'input_max'	 => $search_max_price
 								);
+
+								if( opalestate_options( 'currency_position','before' ) == 'before') {
+									$data['unit_position'] = 'prefix';
+								}
+
 								opalesate_property_slide_ranger_template( __("Price:",'opalestate'), $data );	
 							?>
 						</div>

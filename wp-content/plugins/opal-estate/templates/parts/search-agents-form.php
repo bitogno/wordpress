@@ -12,7 +12,7 @@
 	
 		<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<p class="search-agent-title"><?php esc_html_e( 'Find an experienced agent with:' ,'opalestate'); ?></p>
+				<p class="search-agent-title"><?php esc_html_e( 'Trouver une agence:' ,'opalestate'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
 				<p class="search-agent-title hide"><?php esc_html_e( 'Who sale between:' ,'opalestate'); ?></p>
@@ -46,7 +46,7 @@
 			<div class="col-lg-2 col-md-2 col-sm-2">
 				<button type="submit" class="btn btn-danger btn-block btn-search btn-3d">
 					<i class="fa fa-search"></i>
-					<span><?php esc_html_e('Search','opalestate'); ?></span>
+					<span><?php esc_html_e('Chercher','opalestate'); ?></span>
 				</button>
 			</div>
 		</div>

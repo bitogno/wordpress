@@ -488,14 +488,14 @@ class Opalestate_Plugin_Settings {
 
 
 			$fields[] = array(
-				'name'    => __( 'Min of Search Area', 'opalestate' ),
+				'name'    => __( 'Min of Search Aea', 'opalestate' ),
 				'desc'    => __( 'Enter min of area for starting search', 'opalestate' ),
 				'id'      => 'search_min_area',
 				'type'    => 'text',
 				'default' => 0,
 			); 
 			$fields[] = array(
-				'name'    => __( 'Max of Search Area', 'opalestate' ),
+				'name'    => __( 'Max of Search Aea', 'opalestate' ),
 				'desc'    => __( 'Enter max of area for starting search', 'opalestate' ),
 				'id'      => 'search_max_area',
 				'type'    => 'text',

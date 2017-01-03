@@ -1,9 +1,19 @@
-	<?php
+		<?php
 		$rowcls = apply_filters('opalestate_row_container_class', 'row opal-row'); 
 		if( class_exists("OpalEstate_Search") ): 
 			$query = OpalEstate_Search::get_search_results_query();
 		?>
 		<div class="opaleslate-container">
+				<div class="opalestate-results <?php echo $rowcls; ?>" style="padding-top: 2vh;">
+
+					<div class="col-lg-8"> 
+						<span><?php echo sprintf( __( '%s propriétés trouvées', 'opalestate' ) , $query->found_posts ); ?> </span>
+						<div class="pull-right"> <?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>	</div>
+					</div>
+					<div class="col-lg-4 text-right"> 
+						<?php do_action( 'opalestate_before_render_search_properties_result'); ?> 
+					 </div>
+				</div>
 				<div class="opalesate-archive-top"><div class="<?php echo $rowcls;?>">
 					<div class="col-lg-6 col-md-6 col-sm-6">
 						 <?php opalestate_show_display_modes(); ?>
@@ -15,17 +25,6 @@
 						</div>	
 					</div>
 				</div></div>	
-				
-				<div class="opalestate-results <?php echo $rowcls; ?>">
-
-					<div class="col-lg-8"> 
-						<span><?php echo sprintf( __( 'Found %s Properties', 'opalestate' ) , $query->found_posts ); ?> </span>
-						<div class="pull-right"> <?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>	</div>
-					</div>
-					<div class="col-lg-4 text-right"> 
-						<?php do_action( 'opalestate_before_render_search_properties_result'); ?> 
-					 </div>
-				</div>	
 
 				<div class="opalesate-archive-bottom opalestate-rows opalestate-collection">
 					<?php if( $query->have_posts() ): ?> 

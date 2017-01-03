@@ -318,7 +318,7 @@ class OpalEstate_User{
 		
 		$management = array(
 				array(
-					'name'    => __( 'Avatar Pictures', 'cmb2' ),
+					'name'    => __( 'Photo', 'cmb2' ),
 					'desc'    => __( 'This image will display in user detail and profile box information', 'cmb2' ),
 					'id'      => $prefix . 'gallery',
 					'type'    => is_admin() ? 'file' : 'opal_upload',
@@ -329,7 +329,7 @@ class OpalEstate_User{
 
 				array(
 					'id'   => "first_name",
-					'name' => __( 'First Name', 'opalestate' ),
+					'name' => __( 'Prénom', 'opalestate' ),
 					'type' => 'text',
 					'attributes' => array(
 				        'required' => 'required',
@@ -339,7 +339,7 @@ class OpalEstate_User{
 				),
 				array(
 					'id'   => "last_name",
-					'name' => __( 'Last Name', 'opalestate' ),
+					'name' => __( 'Nom', 'opalestate' ),
 					'type' => 'text',
 					'attributes' => array(
 				        'required' => 'required',
@@ -347,54 +347,46 @@ class OpalEstate_User{
 				),
 
 				array(
-					'id'   => "description",
-					'name' => __( 'Biographical Info', 'opalestate' ),
-					'type' => 'textarea',
-					'description'  => __( 'Input for videos, audios from Youtube, Vimeo and all supported sites by WordPress. It has preview feature.', 'opalestate' ),
-					
-					'after_row' => '</div></div>'
-				),
-				array(
 					'id'   => "{$prefix}job",
-					'name' => __( 'Title/Job', 'opalestate' ),
+					'name' => __( 'Travail', 'opalestate' ),
 					'type' => 'text',
-					'description'  => __( 'Please enter position or job in your company.', 'opalestate' ),
+					'description'  => __( "Merci d'entrer votre poste actuel.", 'opalestate' ),
 					'before_row'   => '<hr><div class="row-group-features group-has-two clearfix"><h3>'.__('Information','opalestate').'</h3>', // callback
 				),
 
 				array(
 					'id'   => "{$prefix}company",
-					'name' => __( 'company', 'opalestate' ),
+					'name' => __( 'Entreprise', 'opalestate' ),
 					'type' => 'text',
-					'description'  => __( 'Please enter company name.', 'opalestate' ),
+					'description'  => __( 'Entre le nom de votre entreprise.', 'opalestate' ),
 				),
 				array(
 					'id'   => "{$prefix}email",
-					'name' => __( 'Contact email', 'opalestate' ),
+					'name' => __( 'Email', 'opalestate' ),
 					'type' => 'text_email',
-					'description'  => __( 'Enter contact name that allow user contact you via the contact form of website.', 'opalestate' ),
+					'description'  => __( 'Entrez votre mail afin de pouvoir être contacté', 'opalestate' ),
 				),
 
 
 				array(
 					'id'   => "{$prefix}phone",
-					'name' => __( 'Phone', 'opalestate' ),
+					'name' => __( 'Téléphone', 'opalestate' ),
 					'type' => 'text',
-					'description'  => __( 'Enter your home phone.', 'opalestate' ),
+					'description'  => __( 'Entrez votre numéro de téléphone', 'opalestate' ),
 				),
 
 				array(
 					'id'   => "{$prefix}skype",
 					'name' => __( 'Skype', 'opalestate' ),
 					'type' => 'text',
-					'description'  => __( 'Input for skype account.', 'opalestate' ),
+					'description'  => __( 'Entrez votre compte skype', 'opalestate' ),
 				),
 
 				array(
 					'id'   => "url",
 					'name' => __( 'Website URL', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Link to your website', 'opalestate' ),
+					'description'  => __( "Entrez l'url de votre site web si vous en avez un", 'opalestate' ),
 					'after_row'   => '</div>'
 				),
 
@@ -402,7 +394,7 @@ class OpalEstate_User{
 					'id'   => "{$prefix}facebook",
 					'name' => __( 'Facebook', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Enter your facebook profile or facebook newfeed', 'opalestate' ),
+					'description'  => __( 'Entrez votre profil Facebook', 'opalestate' ),
 					'before_row'   => '<div class="row-group-features group-has-two group-price clearfix"><h3>'.__('Social','opalestate').'</h3>', // callback
 				),
 
@@ -410,40 +402,40 @@ class OpalEstate_User{
 					'id'   => "{$prefix}linkedin",
 					'name' => __( 'Linkedin URL', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Input for linked in profile.', 'opalestate' ),
+					'description'  => __( 'Entrez votre profil LinkedIn', 'opalestate' ),
 				),
 				array(
 					'id'   => "{$prefix}instagram",
 					'name' => __( 'Instagram URL', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Input for instagram profile.', 'opalestate' ),
+					'description'  => __( 'Entrez votre profil Instagram', 'opalestate' ),
 				),
 				array(
 					'id'   => "{$prefix}pinterest",
 					'name' => __( 'Pinterest Url', 'opalestate' ),
 					'type' => 'text',
-					'description'  => __( 'Input for pinterest feed', 'opalestate' ),
+					'description'  => __( 'Entrez votre profil Printerest', 'opalestate' ),
 				),
 
 				array(
 					'id'   => "{$prefix}googleplus",
 					'name' => __( 'Google Plus Url', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Input for goolge plus profile or your newfeed.', 'opalestate' ),
+					'description'  => __( 'Entrez votre profil Google Plus', 'opalestate' ),
 				),
 
 				array(
 					'id'   => "{$prefix}youtube",
 					'name' => __( 'Youtube Url', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Input for your channel youtube.', 'opalestate' ),
+					'description'  => __( 'Entrez votre chaine Youtube', 'opalestate' ),
 				),
 
 				array(
 					'id'   => "{$prefix}vimeo",
 					'name' => __( 'Vimeo Url', 'opalestate' ),
 					'type' => 'text_url',
-					'description'  => __( 'Input for your channel Vimeo', 'opalestate' ),
+					'description'  => __( 'Entrez votre chaine Vimeo', 'opalestate' ),
 					'after_row'   =>  '</div>'
 				),
 			);
@@ -506,30 +498,30 @@ class OpalEstate_User{
 				'fields'                    => array(
 						array(
 							'id'   => "oldpassword",
-							'name' => __( 'Old Password', 'opalestate' ),
+							'name' => __( 'Ancien mot de passe', 'opalestate' ),
 							'type' => 'text_password',
 							'attributes' => array(
 						        'required' => 'required',
 						    ),
-							'description'  => __( 'Please enter your old password', 'opalestate' ),
+							'description'  => __( "Merci d'entrer votre ancien mot de passe", 'opalestate' ),
 						),
 						array(
 							'id'   => "new_password",
-							'name' => __( 'New Password', 'opalestate' ),
+							'name' => __( 'Nouveau mot de passe', 'opalestate' ),
 							'type' => 'text_password',
 							'attributes' => array(
 						        'required' => 'required',
 						    ),
-							'description'  => __( 'Please enter your new password.', 'opalestate' ),
+							'description'  => __( "Merci d'entrer votre nouveau mot de passe", 'opalestate' ),
 						),
 						array(
 							'id'   => "confirm_password",
-							'name' => __( 'Confirm Password', 'opalestate' ),
+							'name' => __( 'Confirmer le mot de passe', 'opalestate' ),
 							'type' => 'text_password',
 							'attributes' => array(
 						        'required' => 'required',
 						    ),
-							'description'  => __( 'Please enter your confirm password.', 'opalestate' ),
+							'description'  => __( 'Merci de confirmer votre nouveau mot de passe', 'opalestate' ),
 						)
 				)		
 			);	

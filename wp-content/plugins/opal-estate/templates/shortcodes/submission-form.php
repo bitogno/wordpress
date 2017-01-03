@@ -14,7 +14,7 @@
 						</div>
 
 					<?php endforeach; unset( $_SESSION['messages'] ); ?>
-				</div>		
+				</div>
 
 			<?php endif; ?>
 
@@ -32,7 +32,7 @@
 
 				echo cmb2_get_metabox_form( $metaboxes[ OPALESTATE_PROPERTY_PREFIX . 'front' ], $post_id, array(
 					'form_format' => '<form action="//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '" class="cmb-form" method="post" id="%1$s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%2$s">%3$s<input type="submit" name="submit-cmb" value="%4$s" class="button-primary btn btn-primary btn-submit-cmb"></form>',
-					'save_button' => __( 'Save property', 'opalestate' ),
+					'save_button' => __( 'Sauvegarder propriété', 'opalestate' ),
 				) );
 
 				do_action( 'opalestate_submission_form_after' );

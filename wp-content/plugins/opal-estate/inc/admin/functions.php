@@ -1,7 +1,18 @@
 <?php 
- wp_schedule_event(time(), 'daily', 'opalestate_cleanup', '');
+register_activation_hook(__FILE__, 'opalestate_active_cron_jobs');
 
- function opalestate_cleanup(){
+function opalestate_active_cron_jobs() {
+    if (! wp_next_scheduled ( 'opalestate_cleanup' )) {
+		wp_schedule_event(time(), 'daily', 'opalestate_cleanup' );
+    }
+}
+register_deactivation_hook(__FILE__, 'opalestate_deactive_cron_jobs');
+
+function opalestate_deactive_cron_jobs() {
+	wp_clear_scheduled_hook('opalestate_cleanup');
+}
+
+function opalestate_cleanup(){
  	$query = new WP_Query( 
         array( 
             'post_type'   => 'attachment', 

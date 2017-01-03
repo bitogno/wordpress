@@ -18,7 +18,7 @@
         <div id="errors-log"></div>
         <div id="plupload-container"></div>
     </div> 
-    <a id="select-profile-image" class="btn btn-primary btn-block btn-3d" href="javascript:;"><?php esc_html_e('Update Profile Picture','opalestate'); ?></a>
+    <a id="select-profile-image" class="btn btn-primary btn-block btn-3d" href="javascript:;"><?php esc_html_e('Charger photo de profil','opalestate'); ?></a>
     
     <span class="profile-img-info"><?php esc_html_e( '*minimum 270px x 270px', 'opalestate' ); ?><br/></span>
 </div>

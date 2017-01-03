@@ -15,7 +15,7 @@
 <form id="opalestate-search-form" class="opalestate-search-form opalestate-rows" action="<?php echo opalestate_get_search_link(); ?>" method="get">
 	<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<h3><?php echo isset($title) ? $title : _e( 'Quick Search', 'opalestate' ); ?></h3>
+			<h3><?php echo isset($title) ? $title : _e( 'Recherche', 'opalestate' ); ?></h3>
 		</div>
 		<div class="col-lg-9 col-md-9 col-sm-9">
 			<?php
@@ -24,7 +24,7 @@
 			?>
 			<ul class="list-inline clearfix list-property-status">
 				<li class="status-item  <?php if( $sstatus == -1 ): ?> active<?php endif; ?>" data-id="-1">
-					<span><?php _e( 'All', 'opalestate' ); ?></span>
+					<span><?php _e( 'Tout', 'opalestate' ); ?></span>
 				</li>
 				<?php foreach( $statuses as $status ): ?>
 
@@ -46,7 +46,7 @@
 				</div> -->
 
 				<div class="col-lg-4 col-md-4 col-sm-4">
-					<label><?php _e("Location", 'opalestate'); ?></label>
+					<label><?php _e("Localisation", 'opalestate'); ?></label>
 					<?php Opalestate_Taxonomy_Location::dropdownList( $slocation );?>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8">
@@ -80,7 +80,12 @@
 								'input_min'  =>  $search_min_price,
 								'input_max'	 => $search_max_price
 							);
-							opalesate_property_slide_ranger_template( __("Price:",'opalestate'), $data );
+
+							if( opalestate_options( 'currency_position','before' ) == 'before') {
+								$data['unit_position'] = 'prefix';
+							}
+							
+							opalesate_property_slide_ranger_template( __("Prix:",'opalestate'), $data );
 
 						?>
 				</div>

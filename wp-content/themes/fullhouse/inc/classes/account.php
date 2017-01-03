@@ -256,8 +256,8 @@ class Fullhouse_PBR_User_Account{
 
 		if ( !is_user_logged_in() ) {
 			echo '<ul class="list-inline">';
-			echo '<li><a href="#"  data-toggle="modal" data-target="#modalLoginForm" class="pbr-user-login btn btn-primary btn-3d radius-6x">'.esc_html__( 'Login','fullhouse' ).'</a></li>';
-			echo '<li><a href="#"  data-toggle="modal" data-target="#modalRegisterForm" class="pbr-user-register btn btn-white btn-3d radius-6x">'.esc_html__( 'Register','fullhouse' ).'</a></li>';
+			echo '<li><a href="#"  data-toggle="modal" data-target="#modalLoginForm" class="pbr-user-login btn btn-primary btn-3d radius-6x">'.esc_html__( 'Se connecter','fullhouse' ).'</a></li>';
+			echo '<li><a href="#"  data-toggle="modal" data-target="#modalRegisterForm" class="pbr-user-register btn btn-white btn-3d radius-6x">'.esc_html__( "Créer un compte",'fullhouse' ).'</a></li>';
 			echo '</ul>';
 		}else {
 			return $this->greetingContext();
@@ -436,18 +436,18 @@ class Fullhouse_PBR_User_Account{
                     <div class="alert alert-info" role="alert"><?php esc_html_e('Your account has been activated, you can login now.', 'fullhouse'); ?></div>
                     <?php endif; ?>
                     <div class="form-group">
-                        <label for="opalrgt_fname"><?php esc_html_e('First name', 'fullhouse'); ?></label>
+                        <label for="opalrgt_fname"><?php esc_html_e('Prénom', 'fullhouse'); ?></label>
                         <sup class="opalrgt-required-asterisk">*</sup>
-                        <input type="text" class="form-control" name="opalrgt_fname" id="opalrgt_fname" placeholder="<?php esc_html_e('First name', 'fullhouse'); ?>">
+                        <input type="text" class="form-control" name="opalrgt_fname" id="opalrgt_fname" placeholder="<?php esc_html_e('Prénom', 'fullhouse'); ?>">
                     </div>
                     <div class="form-group">
-                        <label for="opalrgt_lname"><?php esc_html_e('Last name', 'fullhouse'); ?></label>
-                        <input type="text" class="form-control" name="opalrgt_lname" id="opalrgt_lname" placeholder="<?php esc_html_e('Last name', 'fullhouse'); ?>">
+                        <label for="opalrgt_lname"><?php esc_html_e('Nom', 'fullhouse'); ?></label>
+                        <input type="text" class="form-control" name="opalrgt_lname" id="opalrgt_lname" placeholder="<?php esc_html_e('Nom', 'fullhouse'); ?>">
                     </div>
                     <div class="form-group">
-                        <label for="opalrgt_username"><?php esc_html_e('Username', 'fullhouse'); ?></label>
+                        <label for="opalrgt_username"><?php esc_html_e('Identifiant', 'fullhouse'); ?></label>
                         <sup class="opalrgt-required-asterisk">*</sup>
-                        <input type="text" class="form-control" name="opalrgt_username" id="opalrgt_username" placeholder="<?php esc_html_e('Username', 'fullhouse'); ?>">
+                        <input type="text" class="form-control" name="opalrgt_username" id="opalrgt_username" placeholder="<?php esc_html_e('Identifiant', 'fullhouse'); ?>">
                     </div>
                     <div class="form-group">
                         <label for="opalrgt_email"><?php esc_html_e('Email', 'fullhouse'); ?></label>
@@ -455,14 +455,14 @@ class Fullhouse_PBR_User_Account{
                         <input type="text" class="form-control" name="opalrgt_email" id="opalrgt_email" placeholder="<?php esc_html_e('Email', 'fullhouse'); ?>">
                     </div>
                     <div class="form-group">
-                        <label for="opalrgt_password"><?php esc_html_e('Password', 'fullhouse'); ?></label>
+                        <label for="opalrgt_password"><?php esc_html_e('Mot de passe', 'fullhouse'); ?></label>
                         <sup class="opalrgt-required-asterisk">*</sup>
-                        <input type="password" class="form-control" name="opalrgt_password" id="opalrgt_password" placeholder="<?php esc_html_e('Password', 'fullhouse'); ?>" >
+                        <input type="password" class="form-control" name="opalrgt_password" id="opalrgt_password" placeholder="<?php esc_html_e('Mot de passe', 'fullhouse'); ?>" >
                     </div>
                     <div class="form-group">
-                        <label for="opalrgt_password2"><?php esc_html_e('Confirm Password', 'fullhouse'); ?></label>
+                        <label for="opalrgt_password2"><?php esc_html_e('Confirmez le mot de passe', 'fullhouse'); ?></label>
                         <sup class="opalrgt-required-asterisk">*</sup>
-                        <input type="password" class="form-control" name="opalrgt_password2" id="opalrgt_password2" placeholder="<?php esc_html_e('Confirm Password', 'fullhouse'); ?>" >
+                        <input type="password" class="form-control" name="opalrgt_password2" id="opalrgt_password2" placeholder="<?php esc_html_e('Confirmez le mot de passe', 'fullhouse'); ?>" >
                     </div>
 
                     <input type="hidden" name="opalrgt_current_url" id="opalrgt_current_url" value="<?php echo esc_attr( get_permalink() ); ?>" />
@@ -476,7 +476,7 @@ class Fullhouse_PBR_User_Account{
                     ?>
                     <button type="submit" class="btn btn-primary">
                         <?php
-                        $submit_button_text = empty($opalrgt_settings['opalrgt_signup_button_text']) ? esc_html__('Register', 'fullhouse') : $opalrgt_settings['opalrgt_signup_button_text'];
+                        $submit_button_text = empty($opalrgt_settings['opalrgt_signup_button_text']) ? esc_html__("S'enregistrer", 'fullhouse') : $opalrgt_settings['opalrgt_signup_button_text'];
                         echo trim( $submit_button_text );
 
                         ?></button>

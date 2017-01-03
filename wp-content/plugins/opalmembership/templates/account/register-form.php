@@ -26,7 +26,7 @@ if ( is_user_logged_in() ) {
 ?>
 <div class="opalesate-form-wrapper">
 	<?php if ( $hide_title === false ) : ?>
-		<h2><?php _e( 'Register', 'opalmembership' ); ?></h2>
+		<h2><?php _e( 'Créer un compte', 'opalmembership' ); ?></h2>
 	<?php endif; ?>
 
 	<?php if ( $message ) : ?>

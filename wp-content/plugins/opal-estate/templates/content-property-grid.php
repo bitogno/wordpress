@@ -15,37 +15,36 @@ $property = opalesetate_property( get_the_ID() );
 	 	<?php opalestate_get_loop_thumbnail( opalestate_get_option('loop_image_size','large') ); ?>
 		<?php echo $property->render_statuses(); ?>
 	</header>
+     
 	<?php opalestate_get_loop_short_meta(); ?>
-	</br>
-	<div class="row">
-		<div class="col-lg-2 col-lg-offset-1">
-			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-		</div>
-		<div class="col-lg-2 col-lg-offset-2">
-			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-		</div>
-		<div class="col-lg-2 col-lg-offset-2">
-			<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
-		</div>
+    <div style="margin-top: 2vh; padding-bottom: 2vh;">
+    	<div class="col-lg-4 col-lg-offset-1">	
+    	<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+    	</div>
+    	<div class="col-lg-4">	
+    	<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+    	</div>
+    	<div class="col-lg-3">	
+    	<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
+    	</div>
 	</div>
-    	
 	<div class="entry-content">
+
+
 		
 		<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 			
 	  	<div class="entry-summary">
 			<?php echo $property->get_address(); ?>
 		</div>
-		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
-
+	<?php the_excerpt(); ?>
  	<div class="property-meta-bottom">	
 		 <?php opalestate_property_loop_price(); ?>
 	</div>
 
 	<div class="entry-content-bottom clearfix">
 		<?php echo $property->render_author_link(); ?>
-		
 	</div>
 
 	<?php  do_action( 'opalestate_after_property_loop_item' ); ?>

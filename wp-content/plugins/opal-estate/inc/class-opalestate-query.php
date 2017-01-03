@@ -91,6 +91,8 @@ class Opalestate_Query {
 			$post_id = get_the_ID();
 		}
 		$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+
+		
 		$args = array(
 			'post_type'         => 'opalestate_property',
 			'posts_per_page'    => $per_page,

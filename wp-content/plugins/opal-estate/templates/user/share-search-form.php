@@ -5,13 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $args = array(); 
 
-$message = sprintf( __( 'Hey there! I saved this search on %s, please check out these homes that are listed. Remember to save this search to be first to catch any new listings.', 'opalestate' ) , get_bloginfo( 'name' ) );
+$message = sprintf( __( "Regarde la recherche que je viens de faire, elle pourrait t'intéresser !", 'opalestate' ) , get_bloginfo( 'name' ) );
 
 if( opalestate_options('enable_share_earch','on') == 'on' ): 
 ?>
 
 <div class="opalestate-popup">
-    <div class="popup-head <?php if( !is_user_logged_in() ): ?> opalestate-need-login <?php endif; ?>"><span class="text-primary"><i class="fa fa-envelope" aria-hidden="true"></i> <?php _e('Share this Search', 'opalestate') ?></span> <?php _e('with Friends & Family', 'opalestate') ?></div>
+    <div class="popup-head <?php if( !is_user_logged_in() ): ?> opalestate-need-login <?php endif; ?>"><span class="text-primary"><i class="fa fa-envelope" aria-hidden="true"></i> <?php _e('Partagez cette recherche', 'opalestate') ?></span></div>
     <?php if( is_user_logged_in() ):
     global $current_user;
     ?>
@@ -20,7 +20,7 @@ if( opalestate_options('enable_share_earch','on') == 'on' ):
         
             <div class="share-content-form-container">
                
-                <h6><?php echo __( 'Are you searching with anyone? Share this search.', 'opalestate' ); ?></h6>
+                <h6><?php echo __( "Envoyez cette recherche à quelqu'un", 'opalestate' ); ?></h6>
 
                 <div class="box-content share-content-form">
 
@@ -28,11 +28,11 @@ if( opalestate_options('enable_share_earch','on') == 'on' ):
                         <?php do_action('opalestate_contact_share_form_before'); ?>
 
                         <div class="form-group">
-                            <input class="form-control inputs-emails" name="friend_email[]" type="email" placeholder="<?php echo __( 'Friend Email', 'opalestate' ); ?>" value="" required="required">
+                            <input class="form-control inputs-emails" name="friend_email[]" type="email" placeholder="<?php echo __( 'Email de la personne', 'opalestate' ); ?>" value="" required="required">
                         </div><!-- /.form-group -->
 
                         <div class="form-group">
-                            <input class="form-control" name="name" type="text" placeholder="<?php echo __( 'Name', 'opalestate' ); ?>" value="<?php echo $current_user->data->display_name; ?>" required="required">
+                            <input class="form-control" name="name" type="text" placeholder="<?php echo __( 'Nom', 'opalestate' ); ?>" value="<?php echo $current_user->data->display_name; ?>" required="required">
                         </div><!-- /.form-group -->
 
                         <div class="form-group">
@@ -45,7 +45,7 @@ if( opalestate_options('enable_share_earch','on') == 'on' ):
                         </div><!-- /.form-group -->
 
                         <?php do_action('opalestate_contact_share_form_after'); ?>
-                        <button class="button btn btn-primary btn-3d btn-block"  data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> <?php echo __( ' Processing', 'opalestate' ); ?>" type="submit" name="contact-form"><?php echo __( 'Send message', 'opalestate' ); ?></button>
+                        <button class="button btn btn-primary btn-3d btn-block"  data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> <?php echo __( ' Chargement', 'opalestate' ); ?>" type="submit" name="contact-form"><?php echo __( 'Envoyer message', 'opalestate' ); ?></button>
                     </form>
                 </div><!-- /.agent-contact-form -->
             </div><!-- /.agent-contact-->

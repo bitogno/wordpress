@@ -149,16 +149,15 @@ function opalestate_get_single_short_meta(){
 function opalestate_render_sortable_dropdown( $selected='', $class='' ){
 
 	$output = '';
-		$modes = array(
-			'featured_desc'		=> __( 'Featured Desending', 'opalestate' ),   
-			'price_asc' 		=> __( 'Price Ascending', 'opalestate' ),
-			'price_desc' 		=> __( 'Price Desending', 'opalestate' ),
-			'areasize_asc' 		=> __( 'Area Ascending', 'opalestate' ),
-			'areasize_desc' 	=> __( 'Area Desending', 'opalestate' ),
+		$modes = array(   
+			'price_asc' 		=> __( 'Prix croissantent', 'opalestate' ),
+			'price_desc' 		=> __( 'Prix décroissant', 'opalestate' ),
+			'areasize_asc' 		=> __( 'Surface croissante', 'opalestate' ),
+			'areasize_desc' 	=> __( 'Surface décroissante', 'opalestate' ),
 		);
 		$modes  = apply_filters( 'opalestate_sortable_modes', $modes );
 
-		$modes  = array_merge( array('' => __('Sort By','opalestate') ), $modes );
+		$modes  = array_merge( array('' => __('Trier par','opalestate') ), $modes );
 		$output = '<form id="opalestate-sortable-form" action="" method="POST"><select name="opalsortable" class="form-control sortable-dropdown" >';
 		if( empty($selected) && isset($_REQUEST['opalsortable']) ){
 			$selected = $_REQUEST['opalsortable'];
@@ -182,28 +181,34 @@ function opalestate_management_user_menu(){
 	$menu['profile'] = array(
 		'icon' 	=> 'fa fa-user',
 		'link'	=> opalestate_get_profile_page_uri(),
-		'title' =>  __( 'My Profile', 'opalestate'),
+		'title' =>  __( 'Mon profil', 'opalestate'),
 		'id'	=> isset( $opalestate_options['profile_page'] ) ? $opalestate_options['profile_page'] : 0
 	);
 
 	$menu['favorite'] = array(
 		'icon' 	=> 'fa fa-star',
 		'link'	=> opalestate_get_favorite_page_uri(),
-		'title' =>  __( 'My Favorite', 'opalestate'),
+		'title' =>  __( 'Mes favoris', 'opalestate'),
 		'id'	=> isset( $opalestate_options['favorite_page'] ) ? $opalestate_options['favorite_page'] : 0
 	);
 
 	$menu['submission'] = array(
 		'icon' 	=> 'fa fa-upload',
 		'link'	=> opalestate_submssion_page(),
-		'title' =>  __( 'Submit Property', 'opalestate'),
+		'title' =>  __( 'Mes recherches', 'opalestate'),
 		'id'	=> isset( $opalestate_options['submission_page'] ) ? $opalestate_options['submission_page'] : 0
 	);
 
 	$menu['myproperties'] = array(
 		'icon' 	=> 'fa fa-building',
 		'link'	=> opalestate_submssion_list_page(),
-		'title' =>  __( 'My Properties', 'opalestate'),
+		'title' =>  __( 'Mon organisation', 'opalestate'),
+		'id'			=> isset( $opalestate_options['submission_list_page'] ) ? $opalestate_options['submission_list_page'] : 0
+	);
+	$menu['myproperties'] = array(
+		'icon' 	=> 'fa fa-building',
+		'link'	=> opalestate_submssion_list_page(),
+		'title' =>  __( 'Mes fichiers', 'opalestate'),
 		'id'			=> isset( $opalestate_options['submission_list_page'] ) ? $opalestate_options['submission_list_page'] : 0
 	);
 
@@ -217,7 +222,7 @@ function opalestate_management_user_menu(){
 		$output .= '<li class="'.( is_object($post) && $post->ID == $item['id'] ? 'active' : '' ).'"><a href="'.$item['link'].'"><i class="'.$item['icon'].'"></i>'.$item['title'].'</a></li>';
 	}
 	
-	$output .= '<li><a href="'.wp_logout_url( home_url('/') ).'"> <i class="fa fa-unlock"></i>'.esc_html__( 'Log out', 'opalestate' ).'</a></li>';	
+	$output .= '<li><a href="'.wp_logout_url( home_url('/') ).'"> <i class="fa fa-unlock"></i>'.esc_html__( 'Se déconnecter', 'opalestate' ).'</a></li>';	
 	
 	$output .= '</ul>';
 

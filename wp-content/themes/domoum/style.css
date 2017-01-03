@@ -7,12 +7,58 @@ Template: fullhouse
 Version: 0.1.0
 */
 
-/* Commenté car probablement non voulu */
-/**{
-  color: red;
-}*/
+.pbr-breadscrumb{
+	background-image: none !important;
+	padding:0 !important;
+}
 
-/*img{
-  max-width : 20%;
-  height : auto;
-}*/
+.opalestate-results span{
+	color : black !important;
+}
+
+#content .vc_row .widget .widgettitle{
+	font-size : 20px !important;
+}
+
+.sidebar .widget_categories{
+	background-color: rgb(196,196,196) !important;
+
+}
+
+.sidebar .widget_categories > ul > li > a{
+	color : rgb(112,112,112) !important;
+}
+
+article.post .entry-content-wrapper{
+	padding-top: 0 !important;
+}
+
+.post{
+	margin-bottom: 5vh;
+}
+
+#site-header img{
+	max-width: 30% !important;
+}
+
+#site-header{
+	margin : 0 !important;
+}
+
+#titleAnnonce h2{
+	text-align: center;
+}
+
+#titleAnnonce{
+	margin-top : 7vh;
+	margin-bottom : 3vh;
+}
+
+#noresult, .siteresult h3{
+	text-align: center;
+}
+
+#sites{
+	margin-top : 6vh;
+	margin-bottom : 8vh;
+}

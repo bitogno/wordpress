@@ -216,12 +216,20 @@ jQuery(document).ready(function($){
         var imin = $( '.slide-ranger-min-input', this ).val();
         var imax = $( '.slide-ranger-max-input', this ).val();
         var slider = $(".slide-ranger-bar",this).get(0); 
+        var unit_pos = $(this).data( "unitpos" );
 
-        var nummm = wNumb({
+        var config_format = {
             decimals: decimals,
             thousand: ',',
-            postfix:  ' ' + unit + ' ',
-        }); 
+        };
+
+        if(unit_pos == 'prefix'){
+            config_format.prefix = ' ' + unit + ' ';
+        }else{
+            config_format.postfix = ' ' + unit + ' ';
+        }
+
+        var nummm = wNumb(config_format);
 
         noUiSlider.create(  slider, {
             range: {
@@ -906,7 +914,23 @@ jQuery(document).ready(function($){
         });
         return false ;
     } );
+    
 
+     $('.ajax-load-properties').delegate( '.pagination li', 'click', function(){
+        var $content = $(this).parents('.ajax-load-properties'); 
+        $.ajax({
+            type: 'POST',
+            url: opalesateJS.ajaxurl,
+            data:  location.search.substr(1)+"&action=get_agent_property&paged="+$(this).data('paged')+"&id="+ $content.data('id'),
+            success: function(data) {
+                if( data ){
+                    $content.html( data );
+                }
+            }
+        });
+        return false;
+    } );
+     
     if( $('.opalestate-sticky').length > 0 ){  
         $(".opalestate-sticky").each( function(){
             $(this).stick_in_parent( $(this).data() );

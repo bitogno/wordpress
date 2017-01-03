@@ -266,3 +266,46 @@ function opalestate_load_more_office_property(){
 	wp_reset_postdata();
 	exit;
 }
+
+
+/**
+ * load more properties by office
+ */
+add_action( 'wp_ajax_get_agent_property', 'opalestate_get_agent_property' );
+add_action( 'wp_ajax_nopriv_get_agent_property', 'opalestate_get_agent_property' );
+
+function opalestate_get_agent_property(){  
+
+ 	global $paged;
+ 	$post = array(
+ 
+ 		'paged'   => 1,
+ 		'id' => 13,
+ 		'limit'  => apply_filters( 'opalesate_agent_properties_limit', 1 ) 
+ 	);
+
+ 	$post = array_merge( $post, $_POST );
+ 	extract( $post );
+ 
+ 	set_query_var( 'paged', $post['paged'] );
+	$query = Opalestate_Query::get_agent_property( null, $post['id'], $limit );
+		
+ 	$paged = $post['paged']; 
+	if( $query->have_posts() ) :  ?>
+		<div class="opalestate-rows">
+			<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
+				<?php while( $query->have_posts() ) : $query->the_post(); ?>
+				  	<div class="col-lg-12 col-md-12 col-sm-12">
+				  	 <?php echo Opalestate_Template_Loader::get_template_part( 'content-property-list' ); ?>
+				  	</div> 
+				<?php endwhile; ?>	
+			</div>
+		</div>	
+		<?php if( $query->max_num_pages > 1 ): ?>
+		<div class="w-pagination"><?php opalestate_pagination(  $query->max_num_pages ); ?></div>
+		<?php endif; ?>
+	<?php 
+	endif; 	
+	wp_reset_postdata();
+	exit;
+}

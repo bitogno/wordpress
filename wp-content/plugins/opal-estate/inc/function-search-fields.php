@@ -64,7 +64,8 @@ function opalesate_property_slide_ranger_template( $label , $data ){
 			'ranger_min' => 0,
 			'ranger_max' => 1000,
 			'input_min'	 => 0,
-			'input_max'  => 1000
+			'input_max'  => 1000,
+			'unit_position'  => 'postfix'
 		);
 
 		$data = array_merge( $default, $data );
@@ -72,7 +73,7 @@ function opalesate_property_slide_ranger_template( $label , $data ){
 
 		extract( $data );
 	?>
-	<div class="opal-slide-ranger" data-unit="<?php echo $unit; ?>" data-decimals="<?php echo $decimals; ?>" >
+	<div class="opal-slide-ranger" data-unit="<?php echo $unit; ?>" data-unitpos="<?php echo $unit_position ?>" data-decimals="<?php echo $decimals; ?>" >
 
  	<label><?php //echo $label; ?>
 		<span  class="slide-ranger-min-label"></span> <i>-</i>
