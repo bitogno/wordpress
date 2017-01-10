@@ -3,7 +3,7 @@
  */
 /** elements mixins **/
 /**
-* Transition-timing-function property@mixin 
+* Transition-timing-function property@mixin
 */
 /*background RGBA
 ============================================*/
@@ -14,7 +14,7 @@
 /****/
 /** elements mixins **/
 /**
-* Transition-timing-function property@mixin 
+* Transition-timing-function property@mixin
 */
 /*background RGBA
 ============================================*/
@@ -284,7 +284,7 @@ i.property-toggle-favorite:hover {
   line-height: 32px;
 }
 
-#opalestate-map-preview {
+#opalestate-map-preview, #opalestate-map-agents {
   position: relative;
 }
 
@@ -2408,7 +2408,7 @@ body.author .agent-box-bio {
   display: none;
 }
 
-#opalestate-map-preview .cluster > div {
+#opalestate-map-preview .cluster > div, #opalestate-map-agents .cluster > div {
   line-height: 30px !important;
 }
 

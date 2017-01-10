@@ -1,18 +1,18 @@
-<?php 
+<?php
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$rowcls =  apply_filters('opalestate_row_container_class', 'row opal-row'); 
+	$rowcls =  apply_filters('opalestate_row_container_class', 'row opal-row');
 
 
-	$slocation  = isset($_GET['location'])?$_GET['location']: opalestate_get_session_location_val();  
+	$slocation  = isset($_GET['location'])?$_GET['location']: opalestate_get_session_location_val();
 	$stypes 	= isset($_GET['types'])?$_GET['types']:-1;
 	$sstatus 	= isset($_GET['status'])?$_GET['status']:-1;
 
 	$search_min_price = isset($_GET['min_price']) ? $_GET['min_price'] :  opalestate_options( 'search_min_price',0 );
 	$search_max_price = isset($_GET['max_price']) ? $_GET['max_price'] : opalestate_options( 'search_max_price',10000000 );
-	
+
 
 	$showareasize = opalestate_options(OPALESTATE_PROPERTY_PREFIX.'areasize_opt', 1 );
-	$showprice 	  = opalestate_options(OPALESTATE_PROPERTY_PREFIX.'price_opt' , 1 );  
+	$showprice 	  = opalestate_options(OPALESTATE_PROPERTY_PREFIX.'price_opt' , 1 );
 	$fields = OpalEstate_Search::get_setting_search_fields( '_v' );
 
 ?>
@@ -29,15 +29,15 @@
 					</div>
 					<div class="col-lg-2 col-md-3 col-sm-4 ajax-change">
 						<?php  Opalestate_Taxonomy_Type::dropdownList( $stypes ); ?>
-					</div>	
-					<input type="hidden" name="paged" value="1">	
-				</form>	
-				<form id="opalestate-more-search-form" class="opalestate-more-search-form pull-left" action="" method="get">	
+					</div>
+					<input type="hidden" name="paged" value="1">
+				</form>
+				<form id="opalestate-more-search-form" class="opalestate-more-search-form pull-left" action="" method="get">
 					<div class="opalestate-popup">
 		 				<div class="popup-head"><span><?php _e('More'); ?></span><i class="fa"></i></div>
 						<div class="popup-body">
 								<div class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></div>
-						
+
 							<div class="ajax-advanded-search">
 								<?php if( $fields ): ?>
 									<?php foreach( $fields as $key => $label ):  ?>
@@ -51,7 +51,7 @@
 								<?php if( $showprice ): ?>
 								<div class="form-group">
 									<div class="cost-price-content">
-										<?php 
+										<?php
 
 									 	 	$data = array(
 												'id' 	 => 'price',
@@ -62,7 +62,7 @@
 												'decimals' => opalestate_get_price_decimals(),
 												'input_max'	 => $search_max_price
 											);
-											opalesate_property_slide_ranger_template( __("Price:",'opalestate'), $data );	
+											opalesate_property_slide_ranger_template( __("Price:",'opalestate'), $data );
 										?>
 									</div>
 								</div>
@@ -80,25 +80,25 @@
 							</div>
 						</div>
 					</div>
-				</form>	
+				</form>
 				<div class="col-lg-1 col-md-2 col-sm-3 col-xs-12">
-					<?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>	
+					<?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>
 				</div>
 				<div class="col-lg-3 col-md-5 col-sm-6 col-xs-12">
 				<?php do_action( 'opalestate_before_render_search_properties_result'); ?>
 				</div>
 			</div>
-		
+
 		</div>
 	</div>
-	<hr>	
+	<hr>
 	<div class="<?php echo $rowcls;?>">
-		
+
 		<div class="col-lg-6 col-md-12">
 			<div id="opalesate-properties-ajax" >
 				<?php echo Opalestate_Template_Loader::get_template_part( 'shortcodes/ajax-map-search-result' ); ?>
 			</div>
-		</div>	
+		</div>
 
 		<div class="col-lg-6 col-md-12">
 
@@ -115,9 +115,9 @@
 				        </div>
 				    </div>
 				</div>
-			</div>	
-		</div>	
+			</div>
+		</div>
 
 
-	</div>	
+	</div>
 </div>

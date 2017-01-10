@@ -1,6 +1,6 @@
 <?php
-	$fields = OpalEstate_Search::get_setting_search_fields(); 
-	$slocation  = isset($_GET['location'])?$_GET['location']: opalestate_get_session_location_val();  
+	$fields = OpalEstate_Search::get_setting_search_fields();
+	$slocation  = isset($_GET['location'])?$_GET['location']: opalestate_get_session_location_val();
 	$stypes 	= isset($_GET['types'])?$_GET['types']:-1;
 	$sstatus 	= isset($_GET['status'])?$_GET['status']:-1;
 
@@ -8,8 +8,22 @@
 	$search_max_price = isset($_GET['max_price']) ? $_GET['max_price'] : opalestate_options( 'search_agent_max_price',10000000 );
 
 ?>
+
+<div id="opalestate-map-agents" style="height:500px;" data-page="<?php echo $paged; ?>">
+	 <div id="mapView">
+				<div class="mapPlaceholder"><!-- <span class="fa fa-spin fa-spinner"></span> <?php //esc_html_e( 'Loading map...', 'opalestate' ); ?> -->
+					<div class="sk-folding-cube">
+				<div class="sk-cube1 sk-cube"></div>
+					<div class="sk-cube2 sk-cube"></div>
+					<div class="sk-cube4 sk-cube"></div>
+					<div class="sk-cube3 sk-cube"></div>
+			</div>
+				</div>
+		</div>
+</div>
+<br><br><br>
 <form id="opalestate-search-agents-form" class="opalestate-search-agents-form" action="<?php echo opalestate_search_agent_uri(); ?>" method="get">
-	
+
 		<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<p class="search-agent-title"><?php esc_html_e( 'Trouver une agence:' ,'opalestate'); ?></p>
@@ -18,7 +32,7 @@
 				<p class="search-agent-title hide"><?php esc_html_e( 'Who sale between:' ,'opalestate'); ?></p>
 			</div>
 		</div>
-		
+
 		<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
 			<div class="col-lg-3 col-md-3 col-sm-3">
 				<?php Opalestate_Taxonomy_Location::dropdownList( $slocation );?>
@@ -26,7 +40,7 @@
 			<div class="col-lg-3 col-md-3 col-sm-3">
 				<?php  Opalestate_Taxonomy_Type::dropdownList( $stypes ); ?>
 			</div>
- 
+
 			<div class="col-lg-4 col-md-4 col-sm-4">
 				    <?php
 

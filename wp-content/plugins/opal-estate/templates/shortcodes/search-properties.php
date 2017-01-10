@@ -15,8 +15,8 @@
 		</div>
 		<div class="container">
 			<div class="search-properies-form">
-				<?php OpalEstate_Search::render_horizontal_form(); ?> 
+				<?php OpalEstate_Search::render_horizontal_form(); ?>
 			</div>
-		</div>	
+		</div>
 	</div>
-</div>	
+</div>

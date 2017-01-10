@@ -73,7 +73,7 @@
 	span {
 		color: $brand-primary;
 		font-family: $headings-font-family;
-	}	
+	}
 	margin-bottom: 15px;
 }
 
@@ -172,7 +172,7 @@ ul.property-meta-list{
 			font-style: normal;
 			color: #fff;
 		}
-	}	
+	}
 	.label-property{
 		display: none;
 	}
@@ -201,8 +201,8 @@ i.property-toggle-favorite {
 	}
 }
 
- 
-#opalestate-map-preview {
+
+#opalestate-map-preview, #opalestate-map-agents {
 	position: relative;
 }
 .mapPlaceholder {
@@ -337,7 +337,7 @@ i.property-toggle-favorite {
 	position: relative;
 }
 
- 
+
 
 /// grid layout
 .opalestate-rows{
@@ -422,7 +422,7 @@ i.property-toggle-favorite {
 					color: $theme-color;
 				}
 			}
-			 
+
 		}
 		.author-link{
 			font-weight: bold;
@@ -448,7 +448,7 @@ i.property-toggle-favorite {
 				height:30px;
 				margin-right: 10px;
 				border-radius: 50%;
-			}	
+			}
 		}
 		.property-list-style{
 			border-bottom:solid 1px $border-color;
@@ -469,7 +469,7 @@ i.property-toggle-favorite {
 			.btn-view-more {
 				display: none;
 			}
-		}	
+		}
 
 		.property-price {
 			color: $theme-color;
@@ -523,11 +523,11 @@ i.property-toggle-favorite {
 					.more-link {
 						display: none;
 					}
-					 
+
 				}
-				 
+
 			}
-			 
+
 		}
 	}
 	.row > div:last-child {
@@ -606,7 +606,7 @@ i.property-toggle-favorite {
 			}
 			.entry-summary {
 				border-top: 1px solid $border-color;
-				margin: 25px -30px 0; 
+				margin: 25px -30px 0;
 				padding: 17px 30px;
 				font-style: normal;
 				p {
@@ -665,9 +665,9 @@ i.property-toggle-favorite {
 	}
 }
 
- 
+
 .widget-properties {
- 
+
 	article {
 		margin-top: 30px;
 	}
@@ -757,7 +757,7 @@ i.property-toggle-favorite {
 }
 
 .single-opalestate-container{
- 
+
 	span.property-label {
 		border-radius: 0;
 		position: absolute;
@@ -880,11 +880,11 @@ i.property-toggle-favorite {
 			padding-right: 5px;
 		}
 	}
- 
+
 }
 
 .google-map-tabs {
- 	.nav.nav-tabs { 
+ 	.nav.nav-tabs {
 		margin-bottom: 0;
 		padding-left: 0; // Override default ul/ol
 		list-style: none;
@@ -918,7 +918,7 @@ i.property-toggle-favorite {
 			}
 		}
 	}
- 
+
 	.tab-pane{
 		 display: none;
 		 &.active{
@@ -1019,7 +1019,7 @@ i.property-toggle-favorite {
 	}
 }
 
- 
+
 /**************************************
  * Archive Agent page
  *************************************/
@@ -1073,7 +1073,7 @@ i.property-toggle-favorite {
 /**************************************
  * Single Agent page
  *************************************/
- 
+
 .agent-box{
 	overflow: hidden;
 	.agent-box-meta{
@@ -1082,7 +1082,7 @@ i.property-toggle-favorite {
 			text-transform: uppercase;
 			font-size: 14px;
 			margin: 0 0 5px;
-			 
+
 		}
 		.agent-job {
 			font-size: 12px;
@@ -1284,7 +1284,7 @@ i.property-toggle-favorite {
 /*********************************************
  *  Office page and style
  **********************************************/
-// grid style 
+// grid style
 .office-grid-style{
 	background:#FFF;
 	margin-bottom: 30px;
@@ -1539,7 +1539,7 @@ i.property-toggle-favorite {
 /**************************************
  * Shortcodes Styles
  *************************************/
- /// search form 
+ /// search form
 .search-properies-form{
 	background-color: $theme-color-second;
 	color:#FFF;
@@ -1557,7 +1557,7 @@ i.property-toggle-favorite {
 		margin-top: 10px;
 	}
 	ul.list-property-status{
-		padding:0; 
+		padding:0;
 		margin:0 0 -1px;
 		li{
 			cursor:pointer;
@@ -1581,7 +1581,7 @@ i.property-toggle-favorite {
 		}
 	}
 	ul.list-inline {
-		padding:0; 
+		padding:0;
 		margin:0 0 -1px;
 		li{
 			position: relative;
@@ -1614,18 +1614,18 @@ i.property-toggle-favorite {
 		text-transform: uppercase;
 		margin-bottom: 7px;
 		display: block;
-		
+
 	}
 	.opal-slide-ranger {
 		label {
 			margin-bottom: 9px;
 		}
 	}
-	 
+
 	.form-control {
 		margin: 0 0 15px;
 		border-radius: 3px;
-		
+
 		height: 28px;
 		padding: 0 12px;
 		line-height: 26px;
@@ -1644,7 +1644,7 @@ i.property-toggle-favorite {
 			color: #000;
 		}
 	}
-	 
+
 	.slide-ranger-bar {
 		margin-top: 17px;
 	}
@@ -1743,7 +1743,7 @@ i.property-toggle-favorite {
 }
 
 
-/// style box information which shows in google maps 
+/// style box information which shows in google maps
 .infoBox{
 	position: relative;
 	> img{
@@ -1825,7 +1825,7 @@ i.property-toggle-favorite {
 		display: none;
 	}
 }
-#opalestate-map-preview {
+#opalestate-map-preview, #opalestate-map-agents{
 	.cluster {
 		> div {
 			line-height: 30px !important;
@@ -1833,7 +1833,7 @@ i.property-toggle-favorite {
 	}
 }
 
-/// Archive navigation 
+/// Archive navigation
 .post-type-archive-opalestate_agent {
 	main#primary {
 		> .row {
@@ -1888,7 +1888,7 @@ i.property-toggle-favorite {
 		width: 100%;
 	}
 }
- 
+
 
 /******************************************
  * Properties Search: NoResult
@@ -2128,7 +2128,7 @@ span.cmb2-metabox-description {
 	}
 }
 
-.cmb2-element .ui-datepicker select.ui-datepicker-month, 
+.cmb2-element .ui-datepicker select.ui-datepicker-month,
 .cmb2-element .ui-datepicker select.ui-datepicker-year {
 	border: none;
 }
@@ -2292,14 +2292,14 @@ span.cmb2-metabox-description {
 		font-size: 30px;
 	}
 }
-.property-submission-form .quicktags-toolbar input.button, 
+.property-submission-form .quicktags-toolbar input.button,
 .property-submission-form .quicktags-toolbar input[type="submit"] {
 	background: #f7f7f7;
 	border: 1px solid #cccccc !important;
 	color: #555;
 	padding: 0 8px 1px;
 }
-.cmb-form .quicktags-toolbar input[type="submit"], 
+.cmb-form .quicktags-toolbar input[type="submit"],
 .cmb-form .quicktags-toolbar input[type="button"] {
 	border-radius: 3px;
 	@include box-shadow(0 1px 0 #ccc);
@@ -2326,7 +2326,7 @@ span.cmb2-metabox-description {
 	}
 }
 
- 
+
 #user-profile-img {
 	margin-bottom: 10px;
 }
@@ -2336,7 +2336,7 @@ span.cmb2-metabox-description {
  * Membership widget
  ******************************************/
 
- 
+
 /**
  *
  */

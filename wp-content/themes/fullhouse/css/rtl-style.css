@@ -6068,7 +6068,7 @@ button.list-group-item-danger.active:focus {
  */
 /** elements mixins **/
 /**
-* Transition-timing-function property@mixin 
+* Transition-timing-function property@mixin
 */
 /*background RGBA
 ============================================*/
@@ -6079,7 +6079,7 @@ button.list-group-item-danger.active:focus {
 /****/
 /** elements mixins **/
 /**
-* Transition-timing-function property@mixin 
+* Transition-timing-function property@mixin
 */
 /*background RGBA
 ============================================*/
@@ -10624,7 +10624,7 @@ body.single .comments {
   color: #FFF;
 }
 
-/*------------------------------------*\ 
+/*------------------------------------*\
     portfolio
 \*------------------------------------*/
 .single-portfolio .header-title .entry-title {
@@ -11651,8 +11651,8 @@ ul.menu li {
   display: block !important;
 }
 
-/** 
-* SOCIAL ICONS 
+/**
+* SOCIAL ICONS
 **/
 .bo-social-icons {
   margin: 0 -5px;
@@ -14386,7 +14386,7 @@ body .vc_progress_bar .vc_single_bar .vc_label span {
 }
 
 /*
- * Single Image 
+ * Single Image
  */
 .wpb_single_image {
   overflow: hidden;
@@ -16241,7 +16241,7 @@ body .vc_progress_bar .vc_single_bar .vc_label span {
     padding: 25px 15px 0 !important;
   }
 
-  #opalestate-map-preview {
+  #opalestate-map-preview, #opalestate-map-agents {
     height: 260px !important;
   }
 
