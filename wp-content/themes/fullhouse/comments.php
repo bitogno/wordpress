@@ -20,7 +20,7 @@ if ( post_password_required() ){
 ?>
 <div id="comments" class="comments">
     <header class="header-title">
-        <h5 class="comments-title"><?php comments_number( esc_html__('0 Comment', 'fullhouse'), esc_html__('1 Comment', 'fullhouse'), esc_html__('% Comments', 'fullhouse') ); ?></h5>
+        <h5 class="comments-title"><?php comments_number( esc_html__('0 Commentaire', 'fullhouse'), esc_html__('1 Commentaire', 'fullhouse'), esc_html__('% Commentaires', 'fullhouse') ); ?></h5>
     </header><!-- /header -->
 
     <?php if ( have_comments() ) { ?>
@@ -33,13 +33,13 @@ if ( post_password_required() ){
     	    if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
     	    ?>
     	    <footer class="navigation comment-navigation" role="navigation">
-    	        <div class="previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'fullhouse' ) ); ?></div>
-    	        <div class="next right"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'fullhouse' ) ); ?></div>
+    	        <div class="previous"><?php previous_comments_link( esc_html__( '&larr; Vieux commentaires', 'fullhouse' ) ); ?></div>
+    	        <div class="next right"><?php next_comments_link( esc_html__( 'Commentaires récents &rarr;', 'fullhouse' ) ); ?></div>
     	    </footer><!-- .comment-navigation -->
     	    <?php endif; // Check for comment navigation ?>
 
     	    <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    	        <p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'fullhouse' ); ?></p>
+    	        <p class="no-comments"><?php esc_html_e( 'Les commentaires sont clos' , 'fullhouse' ); ?></p>
     	    <?php endif; ?>
         </div>
     <?php } ?> 
@@ -50,7 +50,7 @@ if ( post_password_required() ){
                         'title_reply'=> ('<span class="title">'.esc_html__('Leave a Comment','fullhouse').'</span>'),
                         'comment_field' => '<div class="form-group">
                                                 <label class="field-label" for="comment">'. esc_html__('Comment:', 'fullhouse').'</label>
-                                                <textarea rows="4" id="comment" class="form-control"  name="comment"'.$aria_req.' placeholder=" ' . esc_html__('Your Comment', 'fullhouse') . ' "></textarea>
+                                                <textarea rows="4" id="comment" class="form-control"  name="comment"'.$aria_req.' placeholder=" ' . esc_html__('Votre commentaire', 'fullhouse') . ' "></textarea>
                                             </div>',
                         'fields' => apply_filters(
                         	'comment_form_default_fields',

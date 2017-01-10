@@ -8,7 +8,6 @@
 
 					<div class="col-lg-8"> 
 						<span><?php echo sprintf( __( '%s propriétés trouvées', 'opalestate' ) , $query->found_posts ); ?> </span>
-						<div class="pull-right"> <?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>	</div>
 					</div>
 					<div class="col-lg-4 text-right"> 
 						<?php do_action( 'opalestate_before_render_search_properties_result'); ?> 
@@ -30,13 +29,8 @@
 					<?php if( $query->have_posts() ): ?> 
 						<div class="<?php echo $rowcls; ?>">
 							<?php if ( (isset($_COOKIE['opalestate_displaymode']) && $_COOKIE['opalestate_displaymode'] == 'list') || (!isset($_COOKIE['opalestate_displaymode']) && opalestate_options('displaymode', 'grid') == 'list') ):?>
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-									<div class="col-lg-12 col-md-12 col-sm-12">
-				                    	<?php echo Opalestate_Template_Loader::get_template_part( 'content-property-list' ); ?>
-				                	</div>
-				                <?php endwhile; ?>
-							<?php else : ?>
-								<?php 
+								
+				                <?php 
 								$column = apply_filters('opalestate_properties_column_row', 3 ); 
 								$clscol = floor(12/$column);
 								$cnt = 0; while ( $query->have_posts() ) : $query->the_post(); 
@@ -49,6 +43,12 @@
 				                    	<?php echo Opalestate_Template_Loader::get_template_part( 'content-property-grid' ); ?>
 				                	</div>
 								<?php endwhile; ?>
+							<?php else : ?>
+								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+									<div class="col-lg-12 col-md-12 col-sm-12">
+				                    	<?php echo Opalestate_Template_Loader::get_template_part( 'content-property-list' ); ?>
+				                	</div>
+				                <?php endwhile; ?>
 							<?php endif; ?>
 						</div>
 					<?php else: ?>

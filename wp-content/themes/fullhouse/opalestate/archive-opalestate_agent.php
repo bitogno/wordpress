@@ -11,6 +11,8 @@ get_header(); ?>
 	<section id="main-container" class="site-main container" role="main">
 		<div class="search-agents-wrap">
 			<?php echo Opalestate_Template_Loader::get_template_part( 'parts/search-agents-form' ); ?>
+
+			</br>
 			<main id="primary" class="content content-area">
 				<?php if ( have_posts() ) : ?>
 					<header class="page-header">
@@ -19,25 +21,26 @@ get_header(); ?>
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
-					
 					<div class="row">
-						<?php 
-							$cnt = 0 ; 
-							$column = 4; 
-							$colclass = floor( 12/ $column );
-							
-							while ( have_posts() ) : the_post(); 
-								$cls ='';
-								if( $cnt++%$column==0 ){
-									$cls .= ' first-child';
-								}
+						<div class="col-lg-10">
+							<?php 
+								$cnt = 0 ; 
+								$column = 1; 
+								$colclass = floor( 12/ $column );
+								
+								while ( have_posts() ) : the_post(); 
+									$cls ='';
+									if( $cnt++%$column==0 ){
+										$cls .= ' first-child';
+									}
 
-						?>
-							<div class="col-lg-<?php echo $colclass ; ?> <?php echo esc_attr($cls); ?>">
-		                    	<?php echo Opalestate_Template_Loader::get_template_part( 'content-agent-grid' ); ?>
-		                	</div>
-						<?php endwhile; ?>
-					</div>	
+							?>
+								<div class="col-lg-<?php echo $colclass ; ?> <?php echo esc_attr($cls); ?>">
+			                    	<?php echo Opalestate_Template_Loader::get_template_part( 'content-agent-list' ); ?>
+			                	</div>
+							<?php endwhile; ?>
+						</div>
+					</div>
 					<?php the_posts_pagination( array(
 						'prev_text'          => __( 'Previous page', 'fullhouse' ),
 						'next_text'          => __( 'Next page', 'fullhouse' ),

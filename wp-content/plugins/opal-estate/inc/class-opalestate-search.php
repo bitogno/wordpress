@@ -305,7 +305,9 @@ class OpalEstate_Search{
 	 */
 	public static function init(){
 		add_action( 'wp_ajax_opalestate_ajx_get_properties', array( __CLASS__, 'get_search_json' ) );
+		add_action( 'wp_ajax_opalestate_ajx_get_agents', array( __CLASS__, 'get_search_agents' ) );
 		add_action( 'wp_ajax_nopriv_opalestate_ajx_get_properties', array( __CLASS__, 'get_search_json' ) );
+		add_action( 'wp_ajax_nopriv_opalestate_ajx_get_agents', array( __CLASS__, 'get_search_agents' ) );
 
 		add_action( 'wp_ajax_opalestate_render_get_properties', array( __CLASS__, 'render_get_properties' ) );
 		add_action( 'wp_ajax_nopriv_opalestate_render_get_properties', array( __CLASS__, 'render_get_properties' ) );
@@ -332,6 +334,27 @@ class OpalEstate_Search{
 
 	    echo json_encode( $output ); exit;
 	}
+
+		public static function get_search_agents(){
+
+		$args = array(
+			'post_type'   => 'opalestate_agent'
+		);
+		$posts_array = get_posts( $args );
+
+		$output = array();
+
+		while( $posts_array->have_posts() ) {
+
+	        $id = $posts_array->the_post();
+
+	        $output[] = get_post_meta($id, true);
+
+	    }
+
+	    echo json_encode( $output ); exit;
+	}
+
 
 	public static function render_get_properties(){
 		// $_GET = $_POST;

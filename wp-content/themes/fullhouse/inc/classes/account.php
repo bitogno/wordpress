@@ -164,35 +164,35 @@ class Fullhouse_PBR_User_Account{
 		global $reg_errors;
 		$reg_errors = new WP_Error;
 		if ( empty($firstname) || empty( $username ) || empty( $password ) || empty( $email ) || empty( $confirmpassword ) ) {
-		    $reg_errors->add('field', esc_html__( 'Required form field is missing', 'fullhouse' ) );
+		    $reg_errors->add('field', esc_html__( 'Un ou plusieurs champs manquent', 'fullhouse' ) );
 		}
 
 		if ( 4 > strlen( $username ) ) {
-		    $reg_errors->add( 'username_length', esc_html__( 'Username too short. At least 4 characters is required', 'fullhouse' ) );
+		    $reg_errors->add( 'username_length', esc_html__( "Le nom d'utilisateur est trop court. Il doit faire minimum 4 caractères", 'fullhouse' ) );
 		}
 
 		if ( username_exists( $username ) ) {
-	    	$reg_errors->add('user_name', esc_html__( 'Sorry, that username already exists!', 'fullhouse' ) );
+	    	$reg_errors->add('user_name', esc_html__( "Désole, ce nom d'utilisateur existe déjà", 'fullhouse' ) );
 		}
 
 		if ( ! validate_username( $username ) ) {
-		    $reg_errors->add( 'username_invalid', esc_html__( 'Sorry, the username you entered is not valid', 'fullhouse' ) );
+		    $reg_errors->add( 'username_invalid', esc_html__( "Désolé, le nom d'utilisateur que vous avez entré n'est pas valide", 'fullhouse' ) );
 		}
 
 		if ( 5 > strlen( $password ) ) {
-	        $reg_errors->add( 'password', esc_html__( 'Password length must be greater than 5', 'fullhouse' ) );
+	        $reg_errors->add( 'password', esc_html__( 'Le mot de passe doit faire au moins 5 caractères', 'fullhouse' ) );
 	    }
 
 	    if ( $password != $confirmpassword ) {
-	        $reg_errors->add( 'password', esc_html__( 'Password must be equal Confirm Password', 'fullhouse' ) );
+	        $reg_errors->add( 'password', esc_html__( 'Les deux mots de passe ne correspondent pas', 'fullhouse' ) );
 	    }
 
 	    if ( !is_email( $email ) ) {
-		    $reg_errors->add( 'email_invalid', esc_html__( 'Email is not valid', 'fullhouse' ) );
+		    $reg_errors->add( 'email_invalid', esc_html__( "L'email n'est pas conforme", 'fullhouse' ) );
 		}
 
 		if ( email_exists( $email ) ) {
-		    $reg_errors->add( 'email', esc_html__( 'Email Already in use', 'fullhouse' ) );
+		    $reg_errors->add( 'email', esc_html__( "L'email est déjà utilisé", 'fullhouse' ) );
 		}
 
 	}
@@ -231,7 +231,7 @@ class Fullhouse_PBR_User_Account{
 	        	add_user_meta( $res, 'first_name', esc_html($_POST['opalrgt_fname']) );
 	        	add_user_meta( $res, 'last_name', esc_html($_POST['opalrgt_lname']) );
 
-	        	$jsondata = array('status' => '1', 'msg' => esc_html__( 'You have registered, redirecting ...', 'fullhouse' ) );
+	        	$jsondata = array('status' => '1', 'msg' => esc_html__( 'Vous vous êtes enregistrés, redirection ...', 'fullhouse' ) );
 	        	$info['user_login'] = $username;
 			    $info['user_password'] = $password;
 			    $info['remember'] = 1;
@@ -415,7 +415,7 @@ class Fullhouse_PBR_User_Account{
   
             <?php
             $opalrgt_settings = get_option('opalrgt_settings');
-            $form_heading = empty($opalrgt_settings['opalrgt_signup_heading']) ? esc_html__('Register', 'fullhouse') : $opalrgt_settings['opalrgt_signup_heading'];
+            $form_heading = empty($opalrgt_settings['opalrgt_signup_heading']) ? esc_html__('Créer un compte', 'fullhouse') : $opalrgt_settings['opalrgt_signup_heading'];
 
             // check if the user already login
            

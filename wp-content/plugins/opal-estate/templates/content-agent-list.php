@@ -1,10 +1,12 @@
 <?php
 $agent = new OpalEstate_Agent();
 $job='';?>
+
+</br>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="team-v2">
 		<div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 				<div class="team-header">
 			       <?php opalestate_get_loop_agent_thumbnail(); ?>
 			        <?php $agent->render_level(); ?>
@@ -16,7 +18,7 @@ $job='';?>
 			
 			    </div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
 				<div class="team-body">
 			        <div class="team-body-content">
 			            <h5 class="agent-box-title text-uppercase">

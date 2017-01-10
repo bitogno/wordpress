@@ -188,7 +188,7 @@ function opalestate_management_user_menu(){
 	$menu['favorite'] = array(
 		'icon' 	=> 'fa fa-star',
 		'link'	=> opalestate_get_favorite_page_uri(),
-		'title' =>  __( 'Mes favoris', 'opalestate'),
+		'title' =>  __( 'Mes favoris/coups de coeur', 'opalestate'),
 		'id'	=> isset( $opalestate_options['favorite_page'] ) ? $opalestate_options['favorite_page'] : 0
 	);
 
@@ -205,7 +205,7 @@ function opalestate_management_user_menu(){
 		'title' =>  __( 'Mon organisation', 'opalestate'),
 		'id'			=> isset( $opalestate_options['submission_list_page'] ) ? $opalestate_options['submission_list_page'] : 0
 	);
-	$menu['myproperties'] = array(
+	$menu['myfiles'] = array(
 		'icon' 	=> 'fa fa-building',
 		'link'	=> opalestate_submssion_list_page(),
 		'title' =>  __( 'Mes fichiers', 'opalestate'),
@@ -240,8 +240,9 @@ function opalestate_show_display_modes( $default = 'list' ){
 	$op_display = opalestate_get_display_mode($default);
 
 	echo '<form action="'.  $current_url  .'" class="display-mode" method="get">';
-		echo '<button title="'.esc_html__('Grid','opalestate').'" class="btn '.($op_display == 'grid' ? 'active' : '').'" value="grid" name="display" type="submit"><i class="fa fa-th"></i></button>';
-		echo '<button title="'.esc_html__( 'List', 'opalestate' ).'" class="btn '.($op_display == 'list' ? 'active' : '').'" value="list" name="display" type="submit"><i class="fa fa-th-list"></i></button>';
+		echo '<button title="'.esc_html__( 'List', 'opalestate' ).'" class="btn '.($op_display == 'list' ? 'active' : '').'" value="list" name="display" type="submit"><i class="fa fa-th"></i></button>';
+		echo '<button title="'.esc_html__('Grid','opalestate').'" class="btn '.($op_display == 'grid' ? 'active' : '').'" value="grid" name="display" type="submit"><i class="fa fa-th-list"></i></button>';
+		
 	//	echo '<button title="'.esc_html__( 'Map', 'opalestate' ).'" class="btn '.($op_display == 'map' ? 'active' : '').'" value="map" name="display" type="submit"><i class="fa fa-map-marker"></i></button>';
 	echo '</form>';
 }

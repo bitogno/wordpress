@@ -51,7 +51,7 @@ article.post .entry-content-wrapper{
 
 #titleAnnonce{
 	margin-top : 7vh;
-	margin-bottom : 3vh;
+	margin-bottom : 7vh;
 }
 
 #noresult, .siteresult h3{
@@ -62,3 +62,60 @@ article.post .entry-content-wrapper{
 	margin-top : 6vh;
 	margin-bottom : 8vh;
 }
+
+#pbr-masthead{
+	position: fixed;
+}
+
+#iconheart{
+	padding-top: 1vh;
+	padding-bottom: 10vh;
+}
+
+#iconfav{
+	padding-bottom: 10vh;
+}
+
+.calcText{
+	text-align: center;
+}
+
+.buttonCalc{
+	display: block;
+  	margin-left: auto !important;
+  	margin-right: auto !important;
+}
+
+#alertTitle{
+	margin-top: 8vh;
+	margin-bottom: 6vh;
+}
+
+.interv, .intervLabel{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+#emailAlert{
+	border : 1px solid rgb(63,111,183) !important;
+}
+
+.presentation p{
+	text-align : justify !important;
+	color : white !important;
+	font-size: 125% !important;
+}
+
+.presentation{
+	margin-left : auto !important;
+	margin-right : auto !important;
+
+}
+
+/*.site-main{
+	background-image: url("/wp-content/uploads/2017/01/appartement.jpg");
+}*/
+
+.vc_general.vc_cta3.vc_cta3-style-custom{
+		background: transparent !important;
+	}

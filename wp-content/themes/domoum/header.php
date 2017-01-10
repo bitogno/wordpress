@@ -53,7 +53,7 @@
 						<div id="pbr-mainmenu" class="pbr-mainmenu pull-right clearfix">
 
 							<div class="inner navbar-mega-simple pull-left"><?php get_template_part( 'page-templates/parts/nav' ); ?></div>
-
+							<a href="<?php echo get_page_link(12071, $leavename, $sample); ?>"><button class="btn btn-primary">Dépôt annonce</button></a>
 							<div class="quick-action-box pull-right clearfix">
 								<div class="search-box hidden-sm hidden-xs pull-left"><?php get_search_form(); ?></div>
 								<div class="user-login pull-right">

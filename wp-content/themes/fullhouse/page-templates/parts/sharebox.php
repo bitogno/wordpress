@@ -21,7 +21,7 @@ $args = array( 'position' => 'top', 'animation' => 'true' );
 
 <div class="<?php echo apply_filters('opalestate_row_container_class', 'row opal-row');?>">
 	<div class="col-lg-12 col-md-12">
-		<h6 class="pull-left"><?php _e("Share this:", "opalestate"); ?></h6>
+		<h6 class="pull-left"><?php _e("Partagez cela :", "opalestate"); ?></h6>
  
 
 		<div class="pbr-social-share">

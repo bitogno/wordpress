@@ -18,17 +18,18 @@ $meta   = $property->get_meta_shortinfo();
 				<?php do_action( 'opalestate_before_property_loop_item' ); ?>
 			</div>
 			<div class="col-lg-11">
-				<?php opalestate_get_loop_thumbnail( opalestate_get_option('loop_image_size','large') ); ?>
+				<!-- <img src=<?php echo get_the_excerpt(get_the_id())?> class="attachment-large size-large wp-post-image" alt=""> -->
+				<?php opalestate_get_loop_thumbnail( opalestate_get_option('loop_image_size','large') ); ?> 
 				<?php opalestate_get_loop_short_meta(); ?>
 			</div>
-			<div class="col-lg-1">
-				<div style="padding-bottom: 10vh;padding-top: 3vh;">
+			<div class="col-lg-1" id="favicons">
+				<div class="col-xs-4 col-xs-offset-1" id="iconheart">
 					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
 				</div>
-				<div style="padding-bottom: 10vh;">
+				<div class="col-xs-4" id="iconfav">
 					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
 				</div>
-				<div>
+				<div class="col-xs-3">
 					<?php do_shortcode('[opalestate_favorite_button property_id='.get_the_ID() .']'); ?>
 				</div>
 			</div>
@@ -36,8 +37,8 @@ $meta   = $property->get_meta_shortinfo();
 
 		<div class="abs-col-item">
 			<div class="entry-content">
-				<div class="col-lg-9">
-					<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+				<div class="col-lg-9 col-lg-offset-1">
+					<?php the_title( '<h4 class="entry-title"><a href="' . get_the_guid(get_the_id()) . '">', '</a></h4>' ); ?>
 						
 				  	<div class="property-address">
 						<?php echo $property->get_address(); ?>
@@ -46,15 +47,17 @@ $meta   = $property->get_meta_shortinfo();
 					 
 	                <?php opalestate_property_loop_price(); ?>
 	            </div>
-	            <div class="col-lg-3">
-					<div class="pull-left"><?php echo $property->render_author_link(); ?></div>
-				</div>
 			</div><!-- .entry-content -->
 		</div> 
 		
 		<div class="entry-summary">
-			<h5><?php echo __( 'Description', 'opalestate' ); ?></h5>
-			<?php the_excerpt(); ?>
+			<div class="col-lg-9">
+				<h5><?php echo __( 'Description', 'opalestate' ); ?></h5>
+				<?php echo substr(get_the_content(), 0, 200); ?>
+			</div>
+			<div class="col-lg-3">
+				<div class="pull-left" style="padding-top: 100%;"><?php echo $property->render_author_link(); ?></div>
+			</div>
 		</div><!-- .entry-summary -->
 	</div>	
 	

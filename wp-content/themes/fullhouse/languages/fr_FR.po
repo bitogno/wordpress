@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-24 14:33+0100\n"
-"PO-Revision-Date: 2016-11-24 14:38+0100\n"
+"PO-Revision-Date: 2017-01-09 22:01+0100\n"
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: comments.php:50
 msgid "Leave a Comment"
-msgstr ""
+msgstr "Laissez un commentaire"
 
 #: comments.php:52
 msgid "Comment:"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: comments.php:71
 msgid "Post Comment"
-msgstr ""
+msgstr "Publier commentaire"
 
 #: comments.php:72
 msgid "Your email address will not be published."

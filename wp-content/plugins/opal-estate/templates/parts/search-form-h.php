@@ -99,8 +99,9 @@
 		</div>
 		<div class="col-lg-2 col-md-2  col-sm-2">
 			<button type="submit" class="btn btn-danger btn-lg btn-search">
-				<?php _e('Search'); ?>
+				<?php _e('Recherche'); ?>
 			</button>
+			<div class="pull-right" style="text-align: right; margin-top: 1vh;"> <?php echo Opalestate_Template_Loader::get_template_part( 'user-search/render-form' );  ?>	</div>
 		</div>
 	</div>
 </form>

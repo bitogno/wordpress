@@ -212,7 +212,7 @@ if(!function_exists('fullhouse_fnc_pagination_nav')){
                 $last     = min( $total, $per_page * $paged );
 
                 if ( 1 == $total ) {
-                    esc_html_e( 'Showing the single result', 'fullhouse' );
+                    
                 } elseif ( $total <= $per_page || -1 == $per_page ) {
                     printf( esc_html__( 'Showing all %d results', 'fullhouse' ), $total );
                 } else {

@@ -587,12 +587,15 @@ jQuery(document).ready(function($){
             type: 'GET',
             dataType: 'json',
             url: opalesateJS.ajaxurl,
-            data:  location.search.substr(1)+"&action=opalestate_ajx_get_properties&paged="+$('#opalestate-map-preview').data('page'),
+            data:  location.search.substr(1)+"&action=opalestate_ajx_get_agents&paged="+$('#opalestate-map-preview').data('page'),
             success: function(data) {
+                console.log(data);
                initializePropertiesMap( data );
+
             }
         });
     }
+
 
     function initializePropertiesMap( properties ) {
 

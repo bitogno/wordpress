@@ -1706,8 +1706,8 @@ function get_post_reply_link($args = array(), $post = null) {
 	$defaults = array(
 		'add_below'  => 'post',
 		'respond_id' => 'respond',
-		'reply_text' => __('Leave a Comment'),
-		'login_text' => __('Log in to leave a Comment'),
+		'reply_text' => __('Laissez un commentaire'),
+		'login_text' => __('Connectez vous pour laisser un commentaire'),
 		'before'     => '',
 		'after'      => '',
 	);
@@ -2245,7 +2245,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
-		'label_submit'         => __( 'Post Comment' ),
+		'label_submit'         => __( 'Envoyer' ),
 		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
 		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 		'format'               => 'xhtml',

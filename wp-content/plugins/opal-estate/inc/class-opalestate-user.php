@@ -265,7 +265,7 @@ class OpalEstate_User{
  		}
  		
  		if( $new_password != $confirm_password ){
- 			$output->message = __( 'New password is not same confirm password', 'opalestate' );  
+ 			$output->message = __( 'Le nouveau mot de passe et la confirmation sont différents', 'opalestate' );  
  			echo json_encode( $output );exit;
  		}
 
@@ -274,9 +274,9 @@ class OpalEstate_User{
         if( $user && wp_check_password( $oldpassword, $user->data->user_pass, $userID ) ) {
             wp_set_password( $new_password, $userID );
             $output->status = true;
-            $output->message = __( 'Password Updated', 'opalestate' );
+            $output->message = __( 'Mot de passe changé', 'opalestate' );
         } else {
-            $output->message = __( 'Old password is not correct', 'opalestate' );
+            $output->message = __( "L'ancien mot de passe est incorrect", 'opalestate' );
         }
   
         echo json_encode( $output );
@@ -347,20 +347,6 @@ class OpalEstate_User{
 				),
 
 				array(
-					'id'   => "{$prefix}job",
-					'name' => __( 'Travail', 'opalestate' ),
-					'type' => 'text',
-					'description'  => __( "Merci d'entrer votre poste actuel.", 'opalestate' ),
-					'before_row'   => '<hr><div class="row-group-features group-has-two clearfix"><h3>'.__('Information','opalestate').'</h3>', // callback
-				),
-
-				array(
-					'id'   => "{$prefix}company",
-					'name' => __( 'Entreprise', 'opalestate' ),
-					'type' => 'text',
-					'description'  => __( 'Entre le nom de votre entreprise.', 'opalestate' ),
-				),
-				array(
 					'id'   => "{$prefix}email",
 					'name' => __( 'Email', 'opalestate' ),
 					'type' => 'text_email',
@@ -375,69 +361,6 @@ class OpalEstate_User{
 					'description'  => __( 'Entrez votre numéro de téléphone', 'opalestate' ),
 				),
 
-				array(
-					'id'   => "{$prefix}skype",
-					'name' => __( 'Skype', 'opalestate' ),
-					'type' => 'text',
-					'description'  => __( 'Entrez votre compte skype', 'opalestate' ),
-				),
-
-				array(
-					'id'   => "url",
-					'name' => __( 'Website URL', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( "Entrez l'url de votre site web si vous en avez un", 'opalestate' ),
-					'after_row'   => '</div>'
-				),
-
-				array(
-					'id'   => "{$prefix}facebook",
-					'name' => __( 'Facebook', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre profil Facebook', 'opalestate' ),
-					'before_row'   => '<div class="row-group-features group-has-two group-price clearfix"><h3>'.__('Social','opalestate').'</h3>', // callback
-				),
-
-				array(
-					'id'   => "{$prefix}linkedin",
-					'name' => __( 'Linkedin URL', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre profil LinkedIn', 'opalestate' ),
-				),
-				array(
-					'id'   => "{$prefix}instagram",
-					'name' => __( 'Instagram URL', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre profil Instagram', 'opalestate' ),
-				),
-				array(
-					'id'   => "{$prefix}pinterest",
-					'name' => __( 'Pinterest Url', 'opalestate' ),
-					'type' => 'text',
-					'description'  => __( 'Entrez votre profil Printerest', 'opalestate' ),
-				),
-
-				array(
-					'id'   => "{$prefix}googleplus",
-					'name' => __( 'Google Plus Url', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre profil Google Plus', 'opalestate' ),
-				),
-
-				array(
-					'id'   => "{$prefix}youtube",
-					'name' => __( 'Youtube Url', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre chaine Youtube', 'opalestate' ),
-				),
-
-				array(
-					'id'   => "{$prefix}vimeo",
-					'name' => __( 'Vimeo Url', 'opalestate' ),
-					'type' => 'text_url',
-					'description'  => __( 'Entrez votre chaine Vimeo', 'opalestate' ),
-					'after_row'   =>  '</div>'
-				),
 			);
 		
 		if( is_admin() && current_user_can( 'manage_options' )  ){
