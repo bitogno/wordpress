@@ -187,12 +187,12 @@ function opalestate_management_user_menu(){
 
 	$menu['favorite'] = array(
 		'icon' 	=> 'fa fa-star',
-		'link'	=> opalestate_get_favorite_page_uri(),
+		'link'	=> get_page_link(9696),
 		'title' =>  __( 'Mes favoris/coups de coeur', 'opalestate'),
 		'id'	=> isset( $opalestate_options['favorite_page'] ) ? $opalestate_options['favorite_page'] : 0
 	);
 
-	$menu['submission'] = array(
+	$menu['search'] = array(
 		'icon' 	=> 'fa fa-upload',
 		'link'	=> opalestate_submssion_page(),
 		'title' =>  __( 'Mes recherches', 'opalestate'),
@@ -411,6 +411,15 @@ function opalestate_get_favorite_page_uri() {
     $favorite_page = isset( $opalestate_options['favorite_page'] ) ? get_permalink( absint( $opalestate_options['favorite_page'] ) ) : get_bloginfo( 'url' );
 
     return apply_filters( 'opalestate_get_favorite_page_uri', $favorite_page );
+}
+
+function opalestate_get_organisation_page_uri() {
+
+    global $opalestate_options;
+
+    $favorite_page = isset( $opalestate_options['organisation'] ) ? get_permalink( absint( $opalestate_options['organisation'] ) ) : get_bloginfo( 'url' );
+
+    return apply_filters( 'opalestate_get_organisation_page_uri', $favorite_page );
 }
 
 function opalestate_single_layout_templates( $layout ){

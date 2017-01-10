@@ -119,3 +119,25 @@ article.post .entry-content-wrapper{
 .vc_general.vc_cta3.vc_cta3-style-custom{
 		background: transparent !important;
 	}
+
+#space{
+	margin-top: 6vh;
+}
+
+#menuPers h3{
+	margin-bottom: 5vh;
+}
+
+#tablesFav h2{
+	color: rgb(88,88,90);
+	margin-bottom: 4vh;
+	text-align: center;
+}
+
+.dt-button{
+	margin-right: 2% !important;
+}
+
+.select-item{
+	color : white !important;
+}

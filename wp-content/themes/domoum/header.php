@@ -75,5 +75,4 @@
 	</header><!-- #masthead -->
 
 	<?php do_action( 'fullhouse_template_header_after' ); ?>
-	
 	<section id="main" class="site-main">

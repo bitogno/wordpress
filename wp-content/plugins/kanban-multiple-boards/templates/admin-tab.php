@@ -1,0 +1,1 @@
+<a href="#tab-boards" class="nav-tab"><?php echo __('Boards' ) ?></a>
