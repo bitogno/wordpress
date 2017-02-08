@@ -27,7 +27,7 @@ if( !isset($type) ){
           
             
                 <div class="form-group">
-                    <input class="form-control" name="name" type="text" placeholder="<?php echo __( 'Name', 'opalestate' ); ?>" required="required">
+                    <input class="form-control" name="name" type="text" placeholder="<?php echo __( 'Nom', 'opalestate' ); ?>" required="required">
                 </div><!-- /.form-group -->
 
                 <div class="form-group">
@@ -39,7 +39,7 @@ if( !isset($type) ){
                     ; ?></textarea>
                 </div><!-- /.form-group -->
                 <?php do_action('opalestate_agent_contact_form_after'); ?>
-                <button class="button btn btn-primary btn-3d" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> <?php echo __( ' Processing', 'opalestate' ); ?>" type="submit" name="contact-form"><?php echo __( 'Send message', 'opalestate' ); ?></button>
+                <button class="button btn btn-primary btn-3d" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> <?php echo __( ' Processing', 'opalestate' ); ?>" type="submit" name="contact-form"><?php echo __( 'Envoyer message', 'opalestate' ); ?></button>
             </form>
         </div><!-- /.agent-contact-form -->
     </div><!-- /.agent-contact-->

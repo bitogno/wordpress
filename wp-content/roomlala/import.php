@@ -74,7 +74,7 @@ foreach($xml as $property){
   // Une fois qu'on a tous les éléments, on crée un nouveau post avec les éléments de base de la propriété :
   // EXEMPLE, où on récupère en même temps l'ID du post pour ensuite rajouter les metadata :
   $new_property = array(
-    'post_author'=>4,
+    'post_author'=>21551,
     'post_title'=>$title,
     'post_content' =>$content,
     'post_status'=>'publish',
@@ -97,7 +97,7 @@ foreach($xml as $property){
       $imageReceived = file_get_contents($picturePartner);
       file_put_contents("../uploads/".$img_name.".jpeg", $imageReceived);
       $attachment = array(
-        'post_author' => 4,
+        'post_author' => 21551,
         'post_mime_type' => 'image/jpeg',
         'post_title' => 'thumbnail Roomlala',
         'post_content' => '',

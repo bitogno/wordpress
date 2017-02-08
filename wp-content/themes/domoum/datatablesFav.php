@@ -14,7 +14,7 @@ use
     DataTables\Editor\Validate;
  
 // Build our Editor instance and process the data coming from _POST
-Editor::inst( $db, 'table_demo' )
+Editor::inst( $db, 'table_fav' )
     ->fields(
         Field::inst( 'id' )->validator( 'Validate::notEmpty' ),
         Field::inst( 'title' ),

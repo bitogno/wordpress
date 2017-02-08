@@ -192,29 +192,23 @@ function opalestate_management_user_menu(){
 		'id'	=> isset( $opalestate_options['favorite_page'] ) ? $opalestate_options['favorite_page'] : 0
 	);
 
-	$menu['search'] = array(
+	$menu['files'] = array(
 		'icon' 	=> 'fa fa-upload',
-		'link'	=> opalestate_submssion_page(),
-		'title' =>  __( 'Mes recherches', 'opalestate'),
+		'link'	=> get_page_link(12181),
+		'title' =>  __( 'Mes fichiers', 'opalestate'),
 		'id'	=> isset( $opalestate_options['submission_page'] ) ? $opalestate_options['submission_page'] : 0
 	);
 
-	$menu['myproperties'] = array(
+	$menu['alerts'] = array(
 		'icon' 	=> 'fa fa-building',
-		'link'	=> opalestate_submssion_list_page(),
-		'title' =>  __( 'Mon organisation', 'opalestate'),
-		'id'			=> isset( $opalestate_options['submission_list_page'] ) ? $opalestate_options['submission_list_page'] : 0
-	);
-	$menu['myfiles'] = array(
-		'icon' 	=> 'fa fa-building',
-		'link'	=> opalestate_submssion_list_page(),
-		'title' =>  __( 'Mes fichiers', 'opalestate'),
+		'link'	=> get_page_link(12241),
+		'title' =>  __( 'Mes alertes mail', 'opalestate'),
 		'id'			=> isset( $opalestate_options['submission_list_page'] ) ? $opalestate_options['submission_list_page'] : 0
 	);
 
 	$menu = apply_filters( 'opalestate_management_user_menu', $menu );
 
-	$output = '<ul class="account-links nav nav-pills nav-stacked">';
+		$output = '<ul class="account-links nav nav-pills nav-stacked">';
 
 	global $post;
 

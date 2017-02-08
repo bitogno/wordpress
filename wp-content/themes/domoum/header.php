@@ -58,7 +58,11 @@
 								<div class="search-box hidden-sm hidden-xs pull-left"><?php get_search_form(); ?></div>
 								<div class="user-login pull-right">
 
-				                    <?php get_template_part( 'page-templates/parts/user-login' ); ?>
+				                    <?php get_template_part( 'page-templates/parts/user-login' ); 
+				                    wp_enqueue_script( 'jQueryJs', '/wp-content/themes/domoum/editor/js/jquery.js');
+				                    // wp_enqueue_script( 'dropdown', '/wp-content/themes/domoum/dropdown.js');
+				                    ?>
+
 
 				                </div>                 
 				            </div>

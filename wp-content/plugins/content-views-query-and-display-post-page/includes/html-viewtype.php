@@ -189,6 +189,14 @@ if ( !class_exists( 'PT_CV_Html_ViewType' ) ) {
 			// Get responsive class
 			$res_class = apply_filters( PT_CV_PREFIX_ . 'item_col_class', array(), 6 );
 
+			/**
+			 * Improve usability: Show 1 post per slide in real mobile devices
+			 * @since 1.9.3.2
+			 */
+			if ( wp_is_mobile() ) {
+				$columns = $rows	 = 1;
+			}
+
 			// Split items to slide
 			$slides_item = array_chunk( $content_items, $columns * $rows );
 			$pids		 = array_keys( $content_items );

@@ -3,7 +3,7 @@ var editor; // use a global for the submit and return data rendering in the exam
 $(document).ready(function() {
     editor = new $.fn.dataTable.Editor( {
         ajax: "/wp-content/themes/domoum/datatablesFav.php",
-        table: "#coups",
+        table: "#favs",
         fields: [ {
                 label: "Id",
                 name: "id"
@@ -39,7 +39,7 @@ $(document).ready(function() {
         ]
     } );
  
-   	var table = $('#coups').DataTable( {
+   	var table = $('#favs').DataTable( {
         dom: "Bfrtip",
         ajax: "/wp-content/themes/domoum/datatablesFav.php",
         language: {
@@ -68,15 +68,16 @@ $(document).ready(function() {
         ]
     } );
 
-    $('a.toggle-vis').on( 'click', function (e) {
+    $('a.toggle-vis-fav').on( 'click', function (e) {
         e.preventDefault();
  
         // Get the column API object
-        var column = $table.column( $(this).attr('data-column') );
+        var column = table.column( $(this).attr('data-column') );
  
         // Toggle the visibility
         column.visible( ! column.visible() );
     } );
+
 
     table.on( 'order.dt search.dt', function () {
         table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {

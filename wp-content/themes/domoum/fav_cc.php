@@ -39,7 +39,7 @@ get_header( apply_filters( 'fullhouse_fnc_get_header_layout', null ) );
 
 				<div class="col-lg-9" id="tablesFav">
 					<h2>Coups de coeur</h2>
-					<div>
+					<div class="columnCoups">
 						<p>Ajouter / Enlever colonne : 
 						<a class="toggle-vis" data-column="2">Url</a> - 
 						<a class="toggle-vis" data-column="3">Coordonnées</a> - 
@@ -66,9 +66,25 @@ get_header( apply_filters( 'fullhouse_fnc_get_header_layout', null ) );
 				                <th>Commentaire</th>
 				            </tr>
 				        </thead>
-				        <tfoot>
+				    </table>
+
+				    <h2 id="favTitle">Favoris</h2>
+					<div class="columnCoups">
+						<p>Ajouter / Enlever colonne : 
+						<a class="toggle-vis-fav" data-column="2">Url</a> - 
+						<a class="toggle-vis-fav" data-column="3">Coordonnées</a> - 
+						<a class="toggle-vis-fav" data-column="4">Email envoyé</a> - 
+						<a class="toggle-vis-fav" data-column="5">Réponse</a> - 
+						<a class="toggle-vis-fav" data-column="6">Appel fait</a> - 
+						<a class="toggle-vis-fav" data-column="7">Réponse</a> - 
+						<a class="toggle-vis-fav" data-column="8">Visite</a> - 
+						<a class="toggle-vis-fav" data-column="9">Commentaire</a>
+					</div>
+
+					<table id="favs" class="display" cellspacing="0" width="100%">
+				        <thead>
 				            <tr>
-				            	<th>Id</th>
+				           		<th>Id</th>
 				                <th>Bien</th>
 				                <th>Url</th>
 				                <th>Coordonnées</th>
@@ -79,7 +95,7 @@ get_header( apply_filters( 'fullhouse_fnc_get_header_layout', null ) );
 				                <th>Visite</th>
 				                <th>Commentaire</th>
 				            </tr>
-				        </tfoot>
+				        </thead>
 				    </table>
 				</div>
 
@@ -91,6 +107,7 @@ get_header( apply_filters( 'fullhouse_fnc_get_header_layout', null ) );
 				wp_enqueue_script( 'buttonsJs', '/wp-content/themes/domoum/editor/js/dataTables.buttons.min.js');
 				wp_enqueue_script( 'selectJs', '/wp-content/themes/domoum/editor/js/dataTables.select.min.js');
 				wp_enqueue_script( 'Favjs', '/wp-content/themes/domoum/datatablesFav.js');
+				wp_enqueue_script( 'Ccjs', '/wp-content/themes/domoum/datatablesCc.js');
 
 
 

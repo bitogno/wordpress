@@ -69,7 +69,7 @@ $job='';?>
 				    </div><!-- /.agent-box-content -->                     
 			    </div>  
 			    <p class="team-info">
-			        <?php echo opalestate_fnc_excerpt( 15, "..." ); ?>
+			       
 			    </p>
 			</div>
 		</div>         

@@ -56,6 +56,11 @@ article.post .entry-content-wrapper{
 
 #noresult, .siteresult h3{
 	text-align: center;
+	
+}
+
+.siteresult, #noresult{
+	margin-top: 8vh;
 }
 
 #sites{
@@ -112,16 +117,18 @@ article.post .entry-content-wrapper{
 
 }
 
-/*.site-main{
-	background-image: url("/wp-content/uploads/2017/01/appartement.jpg");
-}*/
+.specialImg{
+	background-image: url("/wp-content/uploads/2017/01/appartement-loft.jpg");
+	background-size: cover;
+	padding: 0 !important;
+}
 
 .vc_general.vc_cta3.vc_cta3-style-custom{
 		background: transparent !important;
 	}
 
 #space{
-	margin-top: 6vh;
+	margin-top: 8vh;
 }
 
 #menuPers h3{
@@ -141,3 +148,44 @@ article.post .entry-content-wrapper{
 .select-item{
 	color : white !important;
 }
+
+.columnCoups{
+	margin-bottom: 3vh;
+}
+
+.columnCoups a:hover, .dt-button:hover{
+	cursor: pointer;
+}
+
+#favTitle{
+	margin-top: 18vh;
+}
+
+.titleAnnonce h3{
+	text-align: center;
+	margin-top: 7vh;
+	margin-bottom: 7vh;
+}
+
+.radio{
+	width: 19%;
+}
+
+#submitAnnonce{
+	margin-top: 5vh;
+	margin-bottom: 3vh;
+	margin-left: 44%;
+}
+
+#formAnnonce{
+	background-color: rgb(195,195,195);
+	padding-top: 4vh;
+	padding-left: 8vh;
+	border-radius: 4px;
+	margin-bottom: 5vh;
+}
+
+#formAnnonce label{
+	color : white;
+}
+

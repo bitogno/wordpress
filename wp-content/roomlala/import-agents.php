@@ -6,7 +6,7 @@ ini_set('memory_limit', '2048M');
   require_once 'PHPExcel-1.8/Classes/PHPExcel/IOFactory.php';
 
 // On charge le fichier XML
-$inputFileName = 'testagents.xlsx';
+$inputFileName = 'agences-immo.xlsx';
 
 //  Read your Excel workbook
 try {

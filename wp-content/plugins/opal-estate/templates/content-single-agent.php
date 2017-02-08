@@ -59,7 +59,7 @@
 
 	<?php if( isset($maps) ): ?>
 	<div class="opalestate-box agent-address-map">
-		<h3><?php _e( 'My Address' , 'opalestate' ); ?></h3>
+		<h3><?php _e( 'Mon adresse' , 'opalestate' ); ?></h3>
 	 	<div class="agent-google-map-content">
 	 		<?php if( $address ): ?>
 	 		<p>
@@ -68,7 +68,7 @@
 	 				$terms = wp_get_post_terms( get_the_ID(), 'opalestate_agent_location' );
 					if( $terms && !is_wp_error($terms) ){
 						
-						echo '<strong>'.__('Location:','opalestate').'</strong>';
+						echo '<strong>'.__('Localisation:','opalestate').'</strong>';
 
 						$output = '<span class="property-locations">';
 						foreach( $terms as $term  ){
